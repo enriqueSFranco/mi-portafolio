@@ -1,0 +1,28 @@
+---
+const MENU = [
+	{ title: 'inicio', href: '#home' },
+	{ title: 'perfil profesional', href: '#professional-profile' },
+	{ title: 'conocimientos', href: '#knowledge' },
+	{ title: 'proyectos', href: '#projects' },
+];
+---
+
+<header class='w-full h-16 flex justify-between items-center px-4'>
+	<h1
+		class='text-4xl font-extrabold capitalize text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600'>
+		kike
+	</h1>
+	<nav>
+		<ul class='flex items-center gap-6'>
+			{
+				MENU.map((item) => (
+					<li>
+						<a href={item.href} class='capitalize'>
+							{item.title}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+</header>

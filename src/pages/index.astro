@@ -1,18 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
+import Home from './Home.astro';
+import ProfessionalProfile from './ProfessionalProfile.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title='kike SF'>
+	<Header />
 	<main>
-		<h1 class="text-5xl text-center">portfolio</h1>
-		<!-- <ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-		</ul> -->
+		<Home />
+		<ProfessionalProfile />
 	</main>
 </Layout>
 
@@ -20,7 +17,7 @@ import Card from '../components/Card.astro';
 	main {
 		margin: auto;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: 1200px;
 	}
 	h1 {
 		font-size: 3rem;

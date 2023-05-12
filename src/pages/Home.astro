@@ -1,0 +1,26 @@
+---
+import hero from '../assets/images/me.jpeg';
+import iconGithub from '../assets/icons/github.svg';
+import iconLinkedin from '../assets/icons/linkedin.svg';
+---
+
+<section class='w-full flex justify-between items-center'>
+	<div class='flex flex-col gap-4'>
+		<p class='text-3xl'>Hola</p>
+		<ul class='flex items-center gap-4'>
+			<li>
+				<a href='/#' class='flex items-center gap-4'
+					><img src={iconGithub} alt='enriqueSFranco' /> enriqueSFranco</a
+				>
+			</li>
+			<li>
+				<a href='/#' class='flex items-center gap-4'
+					><img src={iconLinkedin} alt='enriqueSFranco' /> enriqueSFranco</a
+				>
+			</li>
+		</ul>
+	</div>
+	<div class='w-52 h-52 rounded-full overflow-hidden'>
+		<img src={hero} alt='kike sf' />
+	</div>
+</section>
