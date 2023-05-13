@@ -4,21 +4,40 @@ import iconGithub from '../assets/icons/github.svg';
 import iconLinkedin from '../assets/icons/linkedin.svg';
 ---
 
-<section class='w-full flex justify-between items-center bg-slate-400'>
+<section
+	class='w-2/3 flex justify-between items-center bg-black text-white p-4'>
 	<div class='flex flex-col gap-4'>
-		<p class='text-3xl'>Hola</p>
-		<ul class='flex items-center gap-4'>
-			<li>
-				<a href='/#' class='flex items-center gap-4'
-					><img src={iconGithub} alt='enriqueSFranco' /> enriqueSFranco</a
-				>
-			</li>
-			<li>
-				<a href='/#' class='flex items-center gap-4'
-					><img src={iconLinkedin} alt='enriqueSFranco' /> enriqueSFranco</a
-				>
-			</li>
-		</ul>
+		<p class='text-3xl'>Enrique Salinas Franco</p>
+		<p class='text-xl'>
+			Hola <span class='animate-say inline-block origin-center'>👋🏼</span>, mi
+			nombre es Enrique pero también me pueden llamar kike.
+		</p>
+		<div class='flex flex-col justify-start gap-4'>
+			<p
+				class='font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600'>
+			</p>
+			Soy Ingeniero en Sistemas Computaciones y me gusta desarrollar aplicaciones
+			web.
+			<ul
+				class='flex items-center gap-4 [&>li>a]:outline [&>li>a]:outline-1 [&>li>a]:outline-white [&>li>a]:rounded-md [&>li>a]:p-2'>
+				<li>
+					<a
+						href='https://github.com/enriqueSFranco'
+						target='_blank'
+						class='flex items-center gap-4 transition-colors duration-300 ease-in-out hover:bg-white/20'
+						><img src={iconGithub} alt='enriqueSFranco' width='26' /> enriqueSFranco</a
+					>
+				</li>
+				<li>
+					<a
+						href='https://www.linkedin.com/in/enrique-sfranco/'
+						target='_blank'
+						class='flex items-center gap-4 transition-colors duration-300 ease-in-out hover:bg-white/20'
+						><img src={iconLinkedin} alt='enriqueSFranco' width='26' /> enriqueSFranco</a
+					>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class='w-52 h-52 rounded-full overflow-hidden'>
 		<img src={hero} alt='kike sf' />
