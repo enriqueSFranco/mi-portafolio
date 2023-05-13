@@ -3,29 +3,17 @@ import { MENU } from '../share/consts';
 ---
 
 <script>
-	const $listItems: NodeListOf<Element> = document.querySelectorAll('#navLink');
-	const $indicator: HTMLElement | null = document.getElementById('indicator');
-
-	if (!$indicator) return;
-
-	const translations: Record<string, string> = {
-		'--left': 'left',
-		'--top': 'top',
-		'--width': 'width',
-		'--height': 'height',
-	};
-
-	const getTranslatedPropertyName = (prop: string): string => {
-		return translations[prop];
-	};
+	const $listItems = document.querySelectorAll(
+		'#navLink'
+	) as NodeListOf<Element>;
+	const $indicator = document.getElementById('indicator') as HTMLElement;
 
 	$listItems.forEach((item) => {
 		item.addEventListener('mouseenter', () => {
 			const { left, top, width, height } = item.getBoundingClientRect();
 
 			Object.entries({ left, top, width, height }).forEach(([key, value]) => {
-				const translatedProperty: string = getTranslatedPropertyName(key);
-				$indicator.style.setProperty(translatedProperty, `${value}px`);
+				$indicator.style.setProperty(key, `${value}px`);
 			});
 
 			$indicator.style.opacity = '1';
@@ -58,7 +46,7 @@ import { MENU } from '../share/consts';
 		</ul>
 		<div
 			id='indicator'
-			class='absolute bg-black/5 backdrop-blur-lg -z-10 rounded-md left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out'>
+			class='absolute bg-black/5 opacity-0 backdrop-blur-lg -z-10 rounded-md left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out'>
 		</div>
 	</nav>
 </header>
