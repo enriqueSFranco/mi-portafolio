@@ -1,28 +1,64 @@
 ---
-const MENU = [
-	{ title: 'inicio', href: '#home' },
-	{ title: 'perfil profesional', href: '#professional-profile' },
-	{ title: 'conocimientos', href: '#knowledge' },
-	{ title: 'proyectos', href: '#projects' },
-];
+import { MENU } from '../share/consts';
 ---
+
+<script>
+	const $listItems: NodeListOf<Element> = document.querySelectorAll('#navLink');
+	const $indicator: HTMLElement | null = document.getElementById('indicator');
+
+	if (!$indicator) return;
+
+	const translations: Record<string, string> = {
+		'--left': 'left',
+		'--top': 'top',
+		'--width': 'width',
+		'--height': 'height',
+	};
+
+	const getTranslatedPropertyName = (prop: string): string => {
+		return translations[prop];
+	};
+
+	$listItems.forEach((item) => {
+		item.addEventListener('mouseenter', () => {
+			const { left, top, width, height } = item.getBoundingClientRect();
+
+			Object.entries({ left, top, width, height }).forEach(([key, value]) => {
+				const translatedProperty: string = getTranslatedPropertyName(key);
+				$indicator.style.setProperty(translatedProperty, `${value}px`);
+			});
+
+			$indicator.style.opacity = '1';
+			$indicator.style.visibility = 'visible';
+		});
+
+		item.addEventListener('mouseleave', () => {
+			$indicator.style.opacity = '0';
+			$indicator.style.visibility = 'hidden';
+		});
+	});
+</script>
 
 <header class='w-full h-16 flex justify-between items-center px-4'>
 	<h1
 		class='text-4xl font-extrabold capitalize text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600'>
 		kike
 	</h1>
-	<nav>
-		<ul class='flex items-center gap-6'>
+	<nav class='h-16' id='menu'>
+		<ul class='flex items-center h-full' id='menu'>
 			{
 				MENU.map((item) => (
 					<li>
-						<a href={item.href} class='capitalize'>
+						<a href={item.href} class='capitalize p-2 h-1/2' id='navLink'>
 							{item.title}
 						</a>
 					</li>
 				))
 			}
 		</ul>
+		<div
+			id='indicator'
+			class='absolute bg-black/5 backdrop-blur-lg -z-10 rounded-md left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out'>
+		</div>
 	</nav>
 </header>
