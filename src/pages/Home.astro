@@ -1,0 +1,62 @@
+---
+import hero from '../assets/images/me.jpeg';
+import iconGithub from '../assets/icons/github.svg';
+import iconLinkedin from '../assets/icons/linkedin.svg';
+---
+
+<section id='home' class='w-full min-h-screen flex justify-center items-center'>
+	<div class='w-2/3 flex justify-between items-center'>
+		<div class='flex flex-col gap-3'>
+			<p class='text-5xl font-extrabold tracking-wide'>
+				Enrique Salinas Franco <span
+					class='animate-say inline-block origin-center'>👋🏼</span
+				>
+			</p>
+			<p
+				class='font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 tracking-wide'>
+			</p>
+			<div class='flex flex-col gap-10'>
+				<p class='text-xl tracking-wide leading-8'>
+					Soy Ingeniero en Sistemas Computaciones y me gusta desarrollar
+					aplicaciones web.
+				</p>
+				<ul class='flex items-center gap-5 [&>li>a]:rounded-md'>
+					<li>
+						<div
+							class='bg-gradient-to-r p-0.5 rounded-md h-12 from-pink-500 via-red-500 to-yellow-500 w-full'>
+							<a
+								href='https://github.com/enriqueSFranco'
+								target='_blank'
+								class='flex items-center rounded-md px-2 gap-4 h-full w-full bg-black transition-colors duration-300 ease-in-out hover:bg-white/20'
+								><img
+									src={iconGithub}
+									alt='enriqueSFranco'
+									width='26'
+								/>enriqueSFranco</a
+							>
+						</div>
+					</li>
+					<li>
+						<div
+							class='bg-gradient-to-r p-0.5 rounded-md h-12 from-pink-500 via-red-500 to-yellow-500 w-full'>
+							<a
+								href='https://www.linkedin.com/in/enrique-sfranco/'
+								target='_blank'
+								class='flex items-center gap-4 rounded-md px-2 h-full w-full bg-black transition-colors duration-300 ease-in-out hover:bg-white/20'
+								><img
+									src={iconLinkedin}
+									alt='enriqueSFranco'
+									width='26'
+								/>enriqueSFranco</a
+							>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div
+			class='w-72 h-72 outline outline-1 outline-red-200 rounded-full overflow-hidden'>
+			<img src={hero} alt='kike sf' />
+		</div>
+	</div>
+</section>
