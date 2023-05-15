@@ -1,0 +1,46 @@
+---
+import github from '../assets/icons/github.svg';
+import type { Project } from '../share/types';
+import Chip from './Chip.astro';
+import thumbnail from '../assets/images/project.png';
+
+interface Props {
+	project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<li>
+	<article
+		class='w-full h-full relative overflow-hidden rounded-sm outline outline-1 outline-white/20'>
+		<button class='absolute right-2 top-1'>
+			<img src={github} alt={`repository-${project.repository}`} width='22' />
+		</button>
+		<div class='h-52 w-full'>
+			<img
+				src={thumbnail}
+				alt={`project-${project.name}`}
+				class='object-cover h-full w-full'
+			/>
+		</div>
+		<div class='flex flex-col justify-between items-start gap-4 p-4'>
+			<p class='font-bold'>{project.name}</p>
+			<p>{project.description}</p>
+			<ul class='flex justify-start gap-4 flex-wrap'>
+				{
+					project.skills.map((skill) => (
+						<li>
+							<Chip>{skill}</Chip>
+						</li>
+					))
+				}
+			</ul>
+			<a
+				href={project.deploy}
+				class='capitalize transition-colors duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'
+				>ver proyecto</a
+			>
+		</div>
+	</article>
+</li>
