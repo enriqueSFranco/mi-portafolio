@@ -1,0 +1,70 @@
+{
+  "menu": [
+    {
+      "name": "inicio",
+      "href": "#home",
+      "icon": "home"
+    },
+    {
+      "name": "perfil profesional",
+      "href": "#professional-profile",
+      "icon": "school"
+    },
+    {
+      "name": "proyectos",
+      "href": "#projects",
+      "icon": "lightbulb"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "detección de toxicidad",
+      "description": "descripcion del proyecto 1",
+      "skills": [
+        "react",
+        "tailwind",
+        "cohere",
+        "API"
+      ],
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/toxicity-detection"
+    },
+    {
+      "id": 2,
+      "name": "pixel",
+      "description": "descripcion del proyecto 2",
+      "skills": [
+        "react",
+        "tailwind",
+        "deno fresh"
+      ],
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/toxicity-detection"
+    },
+    {
+      "id": 3,
+      "name": "adivina el pokemon",
+      "description": "descripcion del proyecto 3",
+      "skills": [
+        "react",
+        "tailwind",
+        "vite"
+      ],
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/toxicity-detection"
+    },
+    {
+      "id": 4,
+      "name": "cohere instagram",
+      "description": "descripcion del proyecto 4",
+      "skills": [
+        "react",
+        "tailwind",
+        "cohere"
+      ],
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/toxicity-detection"
+    }
+  ]
+}

@@ -2,30 +2,7 @@
 import { MENU } from '../share/consts';
 ---
 
-<script>
-	const $listItems = document.querySelectorAll(
-		'#navLink'
-	) as NodeListOf<Element>;
-	const $indicator = document.getElementById('indicator') as HTMLElement;
-
-	$listItems.forEach((item) => {
-		item.addEventListener('mouseenter', () => {
-			const { left, top, width, height } = item.getBoundingClientRect();
-
-			Object.entries({ left, top, width, height }).forEach(([key, value]) => {
-				$indicator.style.setProperty(key, `${value}px`);
-			});
-
-			$indicator.style.opacity = '1';
-			$indicator.style.visibility = 'visible';
-		});
-
-		item.addEventListener('mouseleave', () => {
-			$indicator.style.opacity = '0';
-			$indicator.style.visibility = 'hidden';
-		});
-	});
-</script>
+<script src='../script/menuActive.ts'></script>
 
 <header
 	class='w-full h-16 flex justify-between items-center px-4 sticky top-0 z-10 bg-black'>
@@ -36,18 +13,28 @@ import { MENU } from '../share/consts';
 	<nav class='h-16' id='menu'>
 		<ul class='flex items-center h-full' id='menu'>
 			{
-				MENU.map((item) => (
-					<li>
-						<a href={item.href} class='capitalize p-2 h-1/2' id='navLink'>
-							{item.title}
-						</a>
-					</li>
-				))
+				MENU.map((item) => {
+					return (
+						<li>
+							<a
+								href={item.href}
+								class='capitalize p-2 h-1/2 flex justify-between gap-1'
+								id='navLink'>
+								<img
+									src={`../../public/${item.icon}.svg`}
+									alt={`icon-${item.title}`}
+									width='22'
+								/>
+								{item.title}
+							</a>
+						</li>
+					);
+				})
 			}
 		</ul>
 		<div
 			id='indicator'
-			class='absolute bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 opacity-0 backdrop-blur-lg -z-10 rounded-md left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out'>
+			class='absolute bg-white/20 opacity-0 backdrop-blur-lg -z-10 rounded-md left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out'>
 		</div>
 	</nav>
 </header>
