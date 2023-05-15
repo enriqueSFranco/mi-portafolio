@@ -5,3 +5,9 @@ export interface Project {
   repository: string;
   deploy: string;
 }
+
+export interface ItemMenu {
+  title: string
+  href: string
+  icon: string
+}

@@ -1,4 +1,12 @@
 {
+  "skills": [
+    "html5",
+    "css3",
+    "tailwindcss",
+    "javascript",
+    "react",
+    "git"
+  ],
   "menu": [
     {
       "name": "inicio",
@@ -19,8 +27,8 @@
   "projects": [
     {
       "id": 1,
-      "name": "detección de toxicidad",
-      "description": "descripcion del proyecto 1",
+      "name": "Detección de Toxicidad en Chat de Twitch",
+      "description": "Sistema que usa la API de Cohere para identificar mensajes tóxicos en tiempo real en el chat de Twitch.",
       "skills": [
         "react",
         "tailwind",
@@ -32,8 +40,8 @@
     },
     {
       "id": 2,
-      "name": "pixel",
-      "description": "descripcion del proyecto 2",
+      "name": "Pixel",
+      "description": "Aplicación web colaborativa de dibujo que muestra sincronización en tiempo real y gestión de datos de usuario.",
       "skills": [
         "react",
         "tailwind",
@@ -45,7 +53,7 @@
     {
       "id": 3,
       "name": "adivina el pokemon",
-      "description": "descripcion del proyecto 3",
+      "description": "Adivina el nombre del Pokémon basándote en imágenes y pistas. ¡Conviértete en un Maestro Pokémon!",
       "skills": [
         "react",
         "tailwind",

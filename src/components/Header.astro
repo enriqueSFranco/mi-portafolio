@@ -1,5 +1,6 @@
 ---
 import { MENU } from '../share/consts';
+import ItemMenu from './ItemMenu.astro';
 ---
 
 <script src='../script/menuActive.ts'></script>
@@ -7,28 +8,14 @@ import { MENU } from '../share/consts';
 <header
 	class='w-full h-16 flex justify-between items-center px-4 sticky top-0 z-10 bg-black'>
 	<h1
-		class='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 capitalize tracking-wide'>
+		class='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 capitalize tracking-wide'>
 		kike
 	</h1>
 	<nav class='h-16' id='menu'>
 		<ul class='flex items-center h-full' id='menu'>
 			{
 				MENU.map((item) => {
-					return (
-						<li>
-							<a
-								href={item.href}
-								class='capitalize p-2 h-1/2 flex justify-between gap-1'
-								id='navLink'>
-								<img
-									src={`../../public/${item.icon}.svg`}
-									alt={`icon-${item.title}`}
-									width='22'
-								/>
-								{item.title}
-							</a>
-						</li>
-					);
+					return <ItemMenu item={item} />;
 				})
 			}
 		</ul>

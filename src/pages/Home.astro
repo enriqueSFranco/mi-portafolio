@@ -2,6 +2,9 @@
 import hero from '../assets/images/me.jpeg';
 import iconGithub from '../assets/icons/github.svg';
 import iconLinkedin from '../assets/icons/linkedin.svg';
+import data from '../api/data.json';
+
+const skills = data.skills;
 ---
 
 <section id='home' class='w-full min-h-screen flex justify-center items-center'>
@@ -20,10 +23,28 @@ import iconLinkedin from '../assets/icons/linkedin.svg';
 					Soy Ingeniero en Sistemas Computaciones y me gusta desarrollar
 					aplicaciones web.
 				</p>
+				<ul class='flex justify-start items-center gap-6'>
+					{
+						skills.map((skill) => (
+							<li>
+								<figure class='grid place-items-center gap-2'>
+									<img
+										src={`../../public/${skill}.svg`}
+										alt={`skill-${skill}`}
+										width='36'
+									/>
+									<figcaption>
+										<span>{skill}</span>
+									</figcaption>
+								</figure>
+							</li>
+						))
+					}
+				</ul>
 				<ul class='flex items-center gap-5 [&>li>a]:rounded-md'>
 					<li>
 						<div
-							class='bg-gradient-to-r p-0.5 rounded-md h-12 from-pink-500 via-red-500 to-yellow-500 w-full'>
+							class='bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 p-0.5 rounded-md h-12 w-full'>
 							<a
 								href='https://github.com/enriqueSFranco'
 								target='_blank'
@@ -38,7 +59,7 @@ import iconLinkedin from '../assets/icons/linkedin.svg';
 					</li>
 					<li>
 						<div
-							class='bg-gradient-to-r p-0.5 rounded-md h-12 from-pink-500 via-red-500 to-yellow-500 w-full'>
+							class='bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 p-0.5 rounded-md h-12 w-full'>
 							<a
 								href='https://www.linkedin.com/in/enrique-sfranco/'
 								target='_blank'

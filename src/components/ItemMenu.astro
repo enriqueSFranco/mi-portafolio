@@ -1,0 +1,22 @@
+---
+import type { ItemMenu } from '../share/types';
+
+interface Props {
+	item: ItemMenu;
+}
+const { item } = Astro.props;
+---
+
+<li>
+	<a
+		href={item.href}
+		class='capitalize p-2 h-1/2 flex justify-between gap-1'
+		id='navLink'>
+		<img
+			src={`../../public/${item.icon}.svg`}
+			alt={`icon-${item.title}`}
+			width='22'
+		/>
+		{item.title}
+	</a>
+</li>
