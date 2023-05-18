@@ -19,6 +19,7 @@ import menuIcon from '/icons/menu-hamburger.svg';
 				$panel.classList.toggle('right-0');
 				$panel.classList.toggle('-right-full');
 				document.getElementById('app').classList.toggle('blur-sm');
+				document.body.style.overflow = 'hidden';
 			}
 		}
 
@@ -31,6 +32,7 @@ import menuIcon from '/icons/menu-hamburger.svg';
 			if ($panel !== null) {
 				$panel.classList.toggle('right-0');
 				$panel.classList.toggle('-right-full');
+				document.body.style.overflow = 'visible';
 				document.getElementById('app').classList.toggle('blur-sm');
 			}
 		}
@@ -39,12 +41,12 @@ import menuIcon from '/icons/menu-hamburger.svg';
 
 <header
 	id='primary-header'
-	class='min-w-full h-16 flex justify-between items-center px-4 sticky top-0 z-10 bg-black'>
+	class='min-w-full h-16 flex justify-between items-center px-4 sticky top-0 bg-black/20 backdrop-blur-sm z-20'>
 	<h1
 		class='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 capitalize tracking-wide'>
 		kike
 	</h1>
-	<button id='btn-open' aria-label='button open menu'>
+	<button id='btn-open' aria-label='button open menu' class='lg:hidden'>
 		<img src={menuIcon} alt='menu hamburger icon' />
 	</button>
 	<nav class='h-16 max-sm:hidden' id='menu'>

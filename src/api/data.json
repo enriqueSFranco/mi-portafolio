@@ -64,15 +64,17 @@
     },
     {
       "id": 4,
-      "name": "cohere instagram",
+      "name": "Landing Page Tesla",
       "description": "descripcion del proyecto 4",
+      "thumbnail": "tesla.png",
       "skills": [
-        "react",
-        "tailwind",
-        "cohere"
+        "astro",
+        "javascript",
+        "html5",
+        "tailwind"
       ],
-      "deploy": "",
-      "repository": "https://github.com/enriqueSFranco/toxicity-detection"
+      "deploy": null,
+      "repository": "https://github.com/enriqueSFranco/landing-page-tesla"
     }
   ]
 }
