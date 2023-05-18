@@ -1,4 +1,5 @@
 ---
+import Blob from '../components/Blob.astro';
 import hero from '../assets/images/me.jpeg';
 import iconGithub from '../assets/icons/github.svg';
 import iconLinkedin from '../assets/icons/linkedin.svg';
@@ -9,9 +10,10 @@ const skills = data.skills;
 
 <section
 	id='home'
-	class='w-full min-h-screen flex justify-center items-center max-sm:items-start max-sm:p-8'>
+	class='relative w-full h-[750px] flex justify-center items-center max-sm:items-start max-sm:p-8'>
+	<Blob />
 	<div
-		class='w-2/3 flex justify-between items-center max-sm:w-full max-sm:flex-col-reverse max-sm:mt-4'>
+		class='w-2/3 flex justify-between items-center max-sm:w-full max-sm:flex-col-reverse max-sm:mt-4 z-10'>
 		<!-- DESCRIPTION -->
 		<div class='flex flex-col gap-3'>
 			<p class='text-5xl max-sm:text-2xl font-extrabold tracking-wide'>
@@ -34,7 +36,7 @@ const skills = data.skills;
 							<li>
 								<figure class='grid place-items-center gap-2'>
 									<img
-										src={`../../public/${skill}.svg`}
+										src={`/icons/${skill}.svg`}
 										alt={`skill-${skill}`}
 										class='w-9 max-sm:w-8'
 									/>
