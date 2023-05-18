@@ -1,17 +1,53 @@
 ---
 import { MENU } from '../share/consts';
 import ItemMenu from './ItemMenu.astro';
+import menuIcon from '/icons/menu-hamburger.svg';
 ---
 
 <script src='../script/menuActive.ts'></script>
 
+<script>
+	const $panel = document.getElementById('panel');
+	document.addEventListener('click', (e) => {
+		if (
+			(e.target && (e.target as Element).matches('#btn-open')) ||
+			(e.target as Element).matches('#btn-open *')
+		) {
+			e.preventDefault();
+			console.log('abrir');
+			if ($panel !== null) {
+				$panel.classList.toggle('right-0');
+				$panel.classList.toggle('-right-full');
+				document.getElementById('app').classList.toggle('blur-sm');
+			}
+		}
+
+		if (
+			(e.target && (e.target as Element).matches('#btn-close')) ||
+			(e.target as Element).matches('#btn-close *')
+		) {
+			e.preventDefault();
+			console.log('cerrar');
+			if ($panel !== null) {
+				$panel.classList.toggle('right-0');
+				$panel.classList.toggle('-right-full');
+				document.getElementById('app').classList.toggle('blur-sm');
+			}
+		}
+	});
+</script>
+
 <header
-	class='w-full h-16 flex justify-between items-center px-4 sticky top-0 z-10 bg-black'>
+	id='primary-header'
+	class='min-w-full h-16 flex justify-between items-center px-4 sticky top-0 z-10 bg-black'>
 	<h1
 		class='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 capitalize tracking-wide'>
 		kike
 	</h1>
-	<nav class='h-16' id='menu'>
+	<button id='btn-open' aria-label='button open menu'>
+		<img src={menuIcon} alt='menu hamburger icon' />
+	</button>
+	<nav class='h-16 max-sm:hidden' id='menu'>
 		<ul class='flex items-center h-full' id='menu'>
 			{
 				MENU.map((item) => {

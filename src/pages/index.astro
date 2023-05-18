@@ -4,13 +4,19 @@ import Header from '../components/Header.astro';
 import Home from './Home.astro';
 import ProfessionalProfile from './ProfessionalProfile.astro';
 import Projects from './Projects.astro';
+import Panel from '../components/Panel.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title='kike SF'>
-	<Header />
-	<main>
-		<Home />
-		<ProfessionalProfile />
-		<Projects />
-	</main>
+	<Panel />
+	<div id='app' class='transition-all duration-200 ease-in'>
+		<Header />
+		<main>
+			<Home />
+			<ProfessionalProfile />
+			<Projects />
+		</main>
+		<Footer />
+	</div>
 </Layout>
