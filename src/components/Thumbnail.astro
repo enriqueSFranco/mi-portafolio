@@ -1,0 +1,21 @@
+---
+import defaultIcon from '/icons/default-photo.svg';
+
+interface Props {
+	name: string;
+	thumbnail: string | null | undefined;
+}
+
+const { thumbnail, name } = Astro.props;
+---
+
+<div
+	class={!thumbnail
+		? 'bg-white/10 py-4 grid place-items-center'
+		: 'w-full h-60'}>
+	<img
+		src={!thumbnail ? defaultIcon : `/images/${thumbnail}`}
+		alt={`project-${name}`}
+		class={!thumbnail ? 'w-32' : 'object-cover object-top h-full w-full'}
+	/>
+</div>

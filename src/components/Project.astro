@@ -1,7 +1,7 @@
 ---
-import github from '../assets/icons/github.svg';
 import type { Project } from '../share/types';
 import Chip from './Chip.astro';
+import Thumbnail from './Thumbnail.astro';
 import defaultIcon from '/icons/default-photo.svg';
 
 interface Props {
@@ -13,20 +13,8 @@ const { project } = Astro.props;
 
 <li>
 	<article
-		class='w-full h-full relative overflow-hidden rounded-sm outline outline-1 outline-white/20'>
-		<button class='absolute right-2 top-2'>
-			<img src={github} alt={`repository-${project.repository}`} width='22' />
-		</button>
-		<div
-			class={!project.thumbnail
-				? 'bg-white/10 py-4 grid place-items-center'
-				: 'w-full'}>
-			<img
-				src={!project.thumbnail ? defaultIcon : `/images/${project.thumbnail}`}
-				alt={`project-${project.name}`}
-				class={!project.thumbnail ? 'w-32' : 'object-cover h-full w-full'}
-			/>
-		</div>
+		class='w-full h-full flex flex-col overflow-hidden rounded-xl font-light outline outline-1 outline-white/20 tracking-wide'>
+		<Thumbnail name={project.name} thumbnail={project.thumbnail} />
 		<div class='flex flex-col justify-between items-start gap-4 p-4'>
 			<p class='font-bold'>{project.name}</p>
 			<p>{project.description}</p>
@@ -39,11 +27,15 @@ const { project } = Astro.props;
 					))
 				}
 			</ul>
-			<a
-				href={project.deploy}
-				class='capitalize transition-colors duration-300 ease-out hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'
-				>ver proyecto</a
-			>
 		</div>
+		<footer class='w-full flex justify-end items-end flex-grow p-4'>
+			<a
+				href={project.repository}
+				target='_blank'
+				rel='noreferrer'
+				class='cursor-pointer bg-white/10 hover:bg-white/20 transition-colors duration-150 ease-in-out py-2 px-3 rounded'
+				>Ver código</a
+			>
+		</footer>
 	</article>
 </li>
