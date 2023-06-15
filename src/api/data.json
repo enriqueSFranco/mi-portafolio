@@ -4,6 +4,7 @@
     "css3",
     "tailwindcss",
     "javascript",
+    "typescript",
     "react",
     "git"
   ],
@@ -44,16 +45,17 @@
     },
     {
       "id": 2,
-      "name": "Pixel",
+      "name": "cv-easy",
       "description": "Aplicación web colaborativa de dibujo que muestra sincronización en tiempo real y gestión de datos de usuario.",
-      "thumbnail": null,
+      "thumbnail": "cv-easy.png",
       "skills": [
         "react",
         "tailwind",
-        "deno fresh"
+        "react-pdf/rendered",
+        "zustand"
       ],
       "deploy": "",
-      "repository": "https://github.com/enriqueSFranco/toxicity-detection"
+      "repository": "https://github.com/enriqueSFranco/cv-easy"
     },
     {
       "id": 3,

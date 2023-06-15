@@ -11,7 +11,6 @@ const skills = data.skills;
 <section
 	id='home'
 	class='relative w-full h-[750px] flex justify-center items-center max-sm:items-start max-sm:p-8'>
-	<Blob />
 	<div
 		class='w-2/3 flex justify-between items-center max-sm:w-full max-sm:flex-col-reverse max-sm:mt-4 z-10'>
 		<!-- DESCRIPTION -->
@@ -29,6 +28,7 @@ const skills = data.skills;
 					Soy Ingeniero en Sistemas Computaciones y me gusta desarrollar
 					aplicaciones web.
 				</p>
+				<!-- CONOCIMIENTOS -->
 				<ul
 					class='flex flex-wrap justify-start items-center gap-6 max-sm:justify-center'>
 					{
@@ -51,7 +51,7 @@ const skills = data.skills;
 				<ul class='flex items-center gap-5 [&>li>a]:rounded-md max-sm:flex-col'>
 					<li>
 						<div
-							class='bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 p-0.5 rounded-md h-12 w-full'>
+							class='bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 rounded-md h-12 w-full'>
 							<a
 								href='https://github.com/enriqueSFranco'
 								target='_blank'
@@ -66,7 +66,7 @@ const skills = data.skills;
 					</li>
 					<li>
 						<div
-							class='bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 p-0.5 rounded-md h-12 w-full'>
+							class='bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 rounded-md h-12 w-full'>
 							<a
 								href='https://www.linkedin.com/in/enrique-sfranco/'
 								target='_blank'
@@ -87,4 +87,5 @@ const skills = data.skills;
 			<img src={hero} alt='kike sf' class='object-contain max-w-full h-auto' />
 		</div>
 	</div>
+	<Blob />
 </section>
