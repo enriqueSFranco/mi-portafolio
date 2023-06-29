@@ -46,12 +46,13 @@
     {
       "id": 2,
       "name": "cv-easy",
-      "description": "Aplicación web colaborativa de dibujo que muestra sincronización en tiempo real y gestión de datos de usuario.",
+      "description": "Crea tu CV con facilidad. La app cv-easy, desarrollada con React, Zustand, Tailwind y TypeScript, te ofrece una experiencia fluida para destacar en tu búsqueda de empleo.",
       "thumbnail": "cv-easy.png",
       "skills": [
         "react",
+        "typescript",
         "tailwind",
-        "react-pdf/rendered",
+        "react-pdf/renderer",
         "zustand"
       ],
       "deploy": "",
@@ -62,11 +63,7 @@
       "name": "PostCraft",
       "description": "Adivina el nombre del Pokémon basándote en imágenes y pistas. ¡Conviértete en un Maestro Pokémon!",
       "thumbnail": "post-craft.png",
-      "skills": [
-        "react",
-        "tailwind",
-        "cohere"
-      ],
+      "skills": ["react", "tailwind", "cohere"],
       "deploy": "",
       "repository": "https://github.com/enriqueSFranco/PostCraft"
     },
@@ -75,11 +72,7 @@
       "name": "Landing Page Tesla",
       "description": "Clon de la landing page de Tesla ⚡️. Desarrollado con HTML, JavaScript, Astro y Tailwind.",
       "thumbnail": "tesla.png",
-      "skills": [
-        "astro",
-        "javascript",
-        "tailwind"
-      ],
+      "skills": ["astro", "javascript", "tailwind"],
       "deploy": null,
       "repository": "https://github.com/enriqueSFranco/landing-page-tesla"
     }
