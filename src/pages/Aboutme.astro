@@ -5,41 +5,39 @@ import LayoutSection from '../layouts/LayoutSection.astro';
 <LayoutSection
 	sectionTitle='perfil profesional'
 	sectionId='professional-profile'>
-	<article class='flex flex-col gap-6'>
-		<div class='flex flex-col gap-6 [&>p]:tracking-wide'>
-			<p class=''>
-				Ingeniero en sistemas computacionales recién egresado del Instituto
-				Politécnico Nacional con habilidades en el desarrollo de aplicaciones
-				web utilizando HTML, CSS, Tailwind, JavaScript y React, y Git.
+	<div class='flex flex-col gap-6 [&>p]:tracking-wide'>
+		<p class=''>
+			Ingeniero en sistemas computacionales recién egresado del Instituto
+			Politécnico Nacional con habilidades en el desarrollo de aplicaciones
+			web utilizando HTML, CSS, Tailwind, JavaScript y React, y Git.
+		</p>
+		<p>
+			Buscando oportunidades para aplicar mis habilidades en tecnología y
+			crecer profesionalmente.
+		</p>
+	</div>
+	<div class='flex flex-col gap-6 lg:w-[800px]'>
+		<h2
+			class='text-4xl max-sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 capitalize tracking-wide'>
+			sobre mi
+		</h2>
+		<div class='[&>p]:tracking-wide'>
+			<p>
+				El deporte siempre ha sido esencial en mi vida, especialmente el
+				basketball y el fútbol, actividades que me apasionan. Estos deportes
+				me mantienen activo y en forma, pero también son una fuente constante
+				de aprendizaje y crecimiento personal.
 			</p>
 			<p>
-				Buscando oportunidades para aplicar mis habilidades en tecnología y
-				crecer profesionalmente.
+				He desarrollado habilidades clave, como trabajo en equipo,
+				comunicación efectiva y perseverancia, que reflejo en mi enfoque
+				colaborativo en el trabajo.
+			</p>
+			<p>
+				Además, mi amor por los videojuegos ha fortalecido mi capacidad para
+				resolver problemas, tomar decisiones bajo presión y adaptarme,
+				habilidades que aplico en entornos laborales desafiantes.
 			</p>
 		</div>
-		<div class='flex flex-col gap-6 lg:w-[800px]'>
-			<h2
-				class='text-4xl max-sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-bl from-rose-400 via-fuchsia-500 to-indigo-500 capitalize tracking-wide'>
-				sobre mi
-			</h2>
-			<div class='grid grid-cols-1 gap-2 [&>p]:tracking-wide'>
-				<p>
-					El deporte siempre ha sido esencial en mi vida, especialmente el
-					basketball y el fútbol, actividades que me apasionan. Estos deportes
-					me mantienen activo y en forma, pero también son una fuente constante
-					de aprendizaje y crecimiento personal.
-				</p>
-				<p>
-					He desarrollado habilidades clave, como trabajo en equipo,
-					comunicación efectiva y perseverancia, que reflejo en mi enfoque
-					colaborativo en el trabajo.
-				</p>
-				<p>
-					Además, mi amor por los videojuegos ha fortalecido mi capacidad para
-					resolver problemas, tomar decisiones bajo presión y adaptarme,
-					habilidades que aplico en entornos laborales desafiantes.
-				</p>
-			</div>
-		</div>
-	</article>
+	</div>
 </LayoutSection>
