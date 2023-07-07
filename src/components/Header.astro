@@ -15,9 +15,9 @@ import menuIcon from '/icons/menu-hamburger.svg';
 		) {
 			e.preventDefault();
 			console.log('abrir');
-			if ($panel !== null) {
-				$panel.classList.toggle('right-0');
-				$panel.classList.toggle('-right-full');
+			if ($panel instanceof HTMLElement) {
+				$panel.classList.toggle('top-0');
+				$panel.classList.toggle('-top-full');
 				document.getElementById('app').classList.toggle('blur-sm');
 				document.body.style.overflow = 'hidden';
 			}
@@ -30,8 +30,8 @@ import menuIcon from '/icons/menu-hamburger.svg';
 			e.preventDefault();
 			console.log('cerrar');
 			if ($panel !== null) {
-				$panel.classList.toggle('right-0');
-				$panel.classList.toggle('-right-full');
+				$panel.classList.toggle('top-0');
+				$panel.classList.toggle('-top-full');
 				document.body.style.overflow = 'visible';
 				document.getElementById('app').classList.toggle('blur-sm');
 			}
