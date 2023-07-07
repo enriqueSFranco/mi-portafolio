@@ -15,9 +15,9 @@ import menuIcon from '/icons/menu-hamburger.svg';
 		) {
 			e.preventDefault();
 			console.log('abrir');
-			if ($panel !== null) {
-				$panel.classList.toggle('right-0');
-				$panel.classList.toggle('-right-full');
+			if ($panel instanceof HTMLElement) {
+				$panel.classList.toggle('top-0');
+				$panel.classList.toggle('-top-full');
 				document.getElementById('app').classList.toggle('blur-sm');
 				document.body.style.overflow = 'hidden';
 			}
@@ -30,8 +30,8 @@ import menuIcon from '/icons/menu-hamburger.svg';
 			e.preventDefault();
 			console.log('cerrar');
 			if ($panel !== null) {
-				$panel.classList.toggle('right-0');
-				$panel.classList.toggle('-right-full');
+				$panel.classList.toggle('top-0');
+				$panel.classList.toggle('-top-full');
 				document.body.style.overflow = 'visible';
 				document.getElementById('app').classList.toggle('blur-sm');
 			}
@@ -43,7 +43,7 @@ import menuIcon from '/icons/menu-hamburger.svg';
 	id='primary-header'
 	class='min-w-full h-16 flex justify-between items-center px-4 sticky top-0 bg-black/5 backdrop-blur-sm z-20'>
 	<h1
-		class='text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 capitalize tracking-wide'>
+		class='text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 capitalize tracking-wide'>
 		kike
 	</h1>
 	<button id='btn-open' aria-label='button open menu' class='lg:hidden'>
