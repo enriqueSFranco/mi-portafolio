@@ -10,24 +10,23 @@ const skills = data.skills;
 
 <section
 	id='home'
-	class='relative w-full h-[750px] flex justify-center items-center max-sm:items-start max-sm:p-8'>
+	class='relative w-full h-[600px] flex justify-center items-center max-sm:items-start max-sm:p-8'>
 	<div
 		class='w-2/3 flex justify-between items-center max-sm:w-full max-sm:flex-col-reverse max-sm:mt-4 z-10'>
 		<!-- DESCRIPTION -->
-		<div class='flex flex-col gap-3'>
-			<p class='text-5xl max-sm:text-2xl font-extrabold tracking-wide'>
-				Enrique Salinas Franco <span
-					class='animate-say inline-block origin-center'>👋🏼</span
-				>
-			</p>
-			<p
-				class='font-extrabold text-transparent bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 tracking-wide'>
-			</p>
+		<div class='flex flex-col gap-10'>
+			<div class="flex flex-col gap-2">
+				<h2 class='text-5xl max-sm:text-2xl font-extrabold tracking-wide'>
+					Enrique Salinas Franco <span
+						class='animate-say inline-block origin-center'>👋🏼</span
+					>
+				</h2>
+				<h3 class='text-xl max-sm:text-sm tracking-wide text-slate-400 leading-8'>
+					Desarrollador Frontend.
+				</h3>
+			</div>
+			<!-- CONOCIMIENTOS -->
 			<div class='flex flex-col gap-10'>
-				<p class='text-xl max-sm:text-sm tracking-wide leading-8'>
-					Desarrollador Frontend especializado en aplicaciones web.
-				</p>
-				<!-- CONOCIMIENTOS -->
 				<ul
 					class='flex flex-wrap justify-start items-center gap-6 max-sm:justify-center'>
 					{
@@ -40,7 +39,7 @@ const skills = data.skills;
 										class='w-9 max-sm:w-8'
 									/>
 									<figcaption>
-										<span class='max-sm:text-sm'>{skill}</span>
+										<span class='xl:text-sm font-light uppercase'>{skill}</span>
 									</figcaption>
 								</figure>
 							</li>
@@ -82,8 +81,10 @@ const skills = data.skills;
 			</div>
 		</div>
 		<!-- IMAGEN -->
-		<div class='w-72 h-64 max-sm:w-52 max-sm:h-52 rounded-full overflow-hidden'>
-			<img src={hero} alt='kike sf' class='object-contain max-w-full h-auto' />
+		<div class='w-72 h-72 max-sm:w-52 max-sm:h-52 rounded-full overflow-hidden'>
+			<picture>
+				<img src={hero} alt='kike sf' class='object-cover max-w-full h-auto' />
+			</picture>
 		</div>
 	</div>
 	<Blob />

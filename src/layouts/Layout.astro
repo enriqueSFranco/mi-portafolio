@@ -12,14 +12,22 @@ const { title } = Astro.props;
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width' />
 		<link rel='icon' type='image/svg+xml' href='/logo.svg' />
+		<!-- GOOGLE FONTS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class='bg-black text-white'>
+	<body class='bg-black text-white font-poppins'>
 		<slot />
 	</body>
 </html>
 <style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(
@@ -29,9 +37,11 @@ const { title } = Astro.props;
 			white 60%
 		);
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #f6f6f6;
+
+	@layer {
+		html {
+			font-family: 'Poppins', sans-serif;
+		}
 	}
 	[id] {
 		scroll-margin-top: 4rem;
