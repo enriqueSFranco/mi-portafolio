@@ -17,7 +17,7 @@ const { project } = Astro.props;
 		<Thumbnail name={project.name} thumbnail={project.thumbnail} />
 		<div class='flex flex-col justify-between items-start gap-4 p-4'>
 			<p class='font-bold'>{project.name}</p>
-			<p>{project.description}</p>
+			<p class="text-sm">{project.description}</p>
 			<ul class='flex justify-start gap-4 flex-wrap'>
 				{
 					project.skills.map((skill) => (
@@ -33,7 +33,7 @@ const { project } = Astro.props;
 				href={project.repository}
 				target='_blank'
 				rel='noreferrer'
-				class='cursor-pointer bg-white/10 flex items-center justify-between gap-2 hover:bg-white/20 transition-colors duration-150 ease-in-out py-2 px-3 rounded'
+				class='cursor-pointer bg-white/10 text-sm flex items-center justify-between gap-2 hover:bg-white/20 transition-colors duration-150 ease-in-out py-2 px-3 rounded'
 				><img src={github} width={18} /> Ver código</a
 			>
 		</footer>
