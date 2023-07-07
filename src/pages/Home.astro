@@ -1,83 +1,38 @@
 ---
-import Blob from '../components/Blob.astro';
-import hero from '../assets/images/me.jpeg';
-import iconGithub from '../assets/icons/github.svg';
-import iconLinkedin from '../assets/icons/linkedin.svg';
-import data from '../api/data.json';
+import Blob from "../components/Blob.astro";
+import ListKnowledge from "../components/ListKnowledge.astro";
+import ContactForms from "../components/ContactForms.astro";
+import hero from "../assets/images/me.jpeg";
+import data from "../api/data.json";
 
 const skills = data.skills;
 ---
 
 <section
 	id='home'
-	class='relative w-full lg:h-[600px] flex justify-center items-center max-sm:items-start max-sm:p-8'>
+	class='relative w-full lg:h-[600px] flex justify-center items-center max-sm:items-start max-sm:p-8'
+>
 	<div
-		class='w-2/3 flex justify-between items-center max-sm:gap-4 max-sm:w-full max-sm:flex-col-reverse z-10'>
+		class='w-2/3 flex justify-between items-center max-sm:gap-4 max-sm:w-full max-sm:flex-col-reverse z-10'
+	>
 		<!-- DESCRIPTION -->
 		<div class='flex flex-col gap-10'>
-			<div class="flex flex-col gap-2">
+			<div class='flex flex-col items-center xl:items-start gap-2'>
 				<h2 class='lg:text-5xl text-xl font-extrabold tracking-wide'>
 					Enrique Salinas Franco <span
 						class='animate-say inline-block origin-center'>👋🏼</span
 					>
 				</h2>
-				<h3 class='text-xl max-sm:text-sm tracking-wide text-slate-400 leading-8'>
+				<h3
+					class='text-xl max-sm:text-sm tracking-wide text-slate-400 leading-8'
+				>
 					Desarrollador Frontend.
 				</h3>
 			</div>
 			<!-- CONOCIMIENTOS -->
 			<div class='flex flex-col gap-10'>
-				<ul
-					class='flex flex-wrap xl:justify-start items-center gap-6 max-sm:justify-center'>
-					{
-						skills.map((skill) => (
-							<li>
-								<figure class='grid place-items-center gap-2'>
-									<img
-										src={`/icons/${skill}.svg`}
-										alt={`skill-${skill}`}
-										class='w-9 max-sm:w-8'
-									/>
-									<figcaption>
-										<span class='xl:text-sm font-light uppercase'>{skill}</span>
-									</figcaption>
-								</figure>
-							</li>
-						))
-					}
-				</ul>
-				<ul class='flex items-center gap-5 [&>li>a]:rounded-md max-sm:flex-col'>
-					<li>
-						<div
-							class='bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5 rounded-md h-12 w-full'>
-							<a
-								href='https://github.com/enriqueSFranco'
-								target='_blank'
-								class='flex items-center rounded-md px-2 gap-4 h-full w-full bg-black transition-colors duration-300 ease-in-out hover:bg-white/20'
-								><img
-									src={iconGithub}
-									alt='enriqueSFranco'
-									width='26'
-								/>enriqueSFranco</a
-							>
-						</div>
-					</li>
-					<li>
-						<div
-							class='bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 p-0.5 rounded-md h-12 w-full'>
-							<a
-								href='https://www.linkedin.com/in/enrique-sfranco/'
-								target='_blank'
-								class='flex items-center gap-4 rounded-md px-2 h-full w-full bg-black transition-colors duration-300 ease-in-out hover:bg-white/20'
-								><img
-									src={iconLinkedin}
-									alt='enriqueSFranco'
-									width='26'
-								/>enriqueSFranco</a
-							>
-						</div>
-					</li>
-				</ul>
+				<ListKnowledge />
+				<ContactForms />
 			</div>
 		</div>
 		<!-- IMAGEN -->
