@@ -1,0 +1,10 @@
+---
+const { skill } = Astro.props;
+---
+
+<figure class='grid place-items-center gap-2'>
+  <img src={`/icons/${skill}.svg`} alt={`skill-${skill}`} class='w-9' />
+  <figcaption>
+    <span class='xl:text-sm text-xs font-light uppercase'>{skill}</span>
+  </figcaption>
+</figure>

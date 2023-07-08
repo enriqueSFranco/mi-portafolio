@@ -1,0 +1,20 @@
+---
+import iconGithub from "../assets/icons/github.svg";
+import iconLinkedin from "../assets/icons/linkedin.svg";
+import ItemContactForm from "./ItemContactForm.astro";
+---
+
+<ul class='flex items-center gap-4'>
+  <li>
+    <ItemContactForm
+      icon={iconGithub}
+      url='https://github.com/enriqueSFranco'
+    />
+  </li>
+  <li>
+    <ItemContactForm
+      icon={iconLinkedin}
+      url='https://www.linkedin.com/in/enrique-sfranco/'
+    />
+  </li>
+</ul>

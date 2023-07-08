@@ -1,0 +1,18 @@
+---
+import ItemKnowledge from "./ItemKnowledge.astro";
+import data from "../api/data.json";
+
+const skills = data.skills;
+---
+
+<ul
+  class='w-full flex flex-wrap justify-center items-center xl:justify-start gap-6'
+>
+  {
+    skills.map((skill) => (
+      <li>
+        <ItemKnowledge skill={skill} />
+      </li>
+    ))
+  }
+</ul>

@@ -40,6 +40,9 @@ module.exports = {
 						transform: 'rotate(0deg)'
 					}
 				}
+			},
+			fontFamily: {
+				poppins: "'Poppins', sans-serif"
 			}
 		},
 	},

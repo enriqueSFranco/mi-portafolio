@@ -1,8 +1,8 @@
 ---
-import type { Project } from '../share/types';
-import Chip from './Chip.astro';
-import Thumbnail from './Thumbnail.astro';
-import github from '../assets/icons/github.svg'
+import type { Project } from "../share/types";
+import Chip from "./Chip.astro";
+import Thumbnail from "./Thumbnail.astro";
+import github from "../assets/icons/github.svg";
 
 interface Props {
 	project: Project;
@@ -13,11 +13,14 @@ const { project } = Astro.props;
 
 <li>
 	<article
-		class='w-full h-full flex flex-col overflow-hidden rounded-xl font-light outline outline-1 outline-white/20 tracking-wide'>
+		class='w-full h-full flex flex-col overflow-hidden rounded-xl font-light outline outline-1 outline-white/10 tracking-wide'
+	>
 		<Thumbnail name={project.name} thumbnail={project.thumbnail} />
-		<div class='flex flex-col justify-between items-start gap-4 p-4'>
+		<div
+			class='flex flex-col justify-between items-start gap-4 p-4 bg-gradient-to-t from-white/5 via-gray-950 to-black'
+		>
 			<p class='font-bold'>{project.name}</p>
-			<p>{project.description}</p>
+			<p class='text-sm text-gray-400'>{project.description}</p>
 			<ul class='flex justify-start gap-4 flex-wrap'>
 				{
 					project.skills.map((skill) => (
@@ -27,15 +30,15 @@ const { project } = Astro.props;
 					))
 				}
 			</ul>
+			<footer class='w-full flex justify-end items-end flex-grow'>
+				<a
+					href={project.repository}
+					target='_blank'
+					rel='noreferrer'
+					class='cursor-pointer text-sm flex items-center justify-between gap-2 hover:bg-white/20 transition-colors duration-150 ease-in-out py-2 px-3 rounded'
+					><img src={github} width={18} /> Ver código</a
+				>
+			</footer>
 		</div>
-		<footer class='w-full flex justify-end items-end flex-grow p-4'>
-			<a
-				href={project.repository}
-				target='_blank'
-				rel='noreferrer'
-				class='cursor-pointer bg-white/10 flex items-center justify-between gap-2 hover:bg-white/20 transition-colors duration-150 ease-in-out py-2 px-3 rounded'
-				><img src={github} width={18} /> Ver código</a
-			>
-		</footer>
 	</article>
 </li>
