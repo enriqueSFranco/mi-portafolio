@@ -17,7 +17,7 @@ const { project } = Astro.props;
 	>
 		<Thumbnail name={project.name} thumbnail={project.thumbnail} />
 		<div
-			class='flex flex-col justify-between items-start gap-4 p-4 bg-gradient-to-t from-white/5 via-gray-950 to-black'
+			class='h-full flex flex-col justify-between items-start gap-4 p-4 bg-gradient-to-t from-white/5 via-gray-950 to-black'
 		>
 			<p class='font-bold'>{project.name}</p>
 			<p class='text-sm text-gray-400'>{project.description}</p>
