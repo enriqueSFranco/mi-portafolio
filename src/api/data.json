@@ -2,11 +2,11 @@
   "skills": [
     "html5",
     "css3",
-    "tailwindcss",
     "javascript",
     "typescript",
     "react",
-    "git"
+    "git",
+    "tailwindcss"
   ],
   "menu": [
     {
