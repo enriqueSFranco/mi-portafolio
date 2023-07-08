@@ -1,0 +1,19 @@
+---
+import { MENU } from "../share/constants.d";
+import ItemMenu from "./ItemMenu.astro";
+---
+
+<nav class='h-16 max-sm:hidden' id='menu'>
+  <ul class='flex items-center h-full' id='menu'>
+    {
+      MENU.map((item) => {
+        return <ItemMenu item={item} />;
+      })
+    }
+  </ul>
+  <div
+    id='indicator'
+    class='absolute bg-white/20 opacity-0 backdrop-blur-lg -z-10 rounded-md left-[var(--left)] top-[var(--top)] w-[var(--width)] h-[var(--height)] transition-all duration-300 ease-in-out'
+  >
+  </div>
+</nav>

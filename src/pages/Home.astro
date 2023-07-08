@@ -2,10 +2,7 @@
 import Blob from "../components/Blob.astro";
 import ListKnowledge from "../components/ListKnowledge.astro";
 import ContactForms from "../components/ContactForms.astro";
-import hero from "../assets/images/me.jpeg";
-import data from "../api/data.json";
-
-const skills = data.skills;
+import Avatar from "../components/Avatar.astro";
 ---
 
 <section
@@ -17,7 +14,7 @@ const skills = data.skills;
 	>
 		<!-- DESCRIPTION -->
 		<div class='flex flex-col gap-10'>
-			<div class='flex flex-col items-center xl:items-start gap-2'>
+			<header class='flex flex-col items-center xl:items-start gap-2'>
 				<h2 class='lg:text-5xl text-xl font-extrabold tracking-wide'>
 					Enrique Salinas Franco <span
 						class='animate-say inline-block origin-center'>👋🏼</span
@@ -28,7 +25,7 @@ const skills = data.skills;
 				>
 					Desarrollador Frontend.
 				</h3>
-			</div>
+			</header>
 			<!-- CONOCIMIENTOS Y REDES SOCIALES -->
 			<div class='flex flex-col gap-10'>
 				<ListKnowledge />
@@ -36,11 +33,7 @@ const skills = data.skills;
 			</div>
 		</div>
 		<!-- IMAGEN -->
-		<div class='w-72 h-72 max-sm:w-52 max-sm:h-52 rounded-full overflow-hidden'>
-			<picture>
-				<img src={hero} alt='kike sf' class='object-cover max-w-full h-auto' />
-			</picture>
-		</div>
+		<Avatar />
 	</div>
 	<Blob />
 </section>
