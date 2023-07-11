@@ -17,7 +17,7 @@ const { project } = Astro.props;
 	>
 		<Thumbnail name={project.name} thumbnail={project.thumbnail} />
 		<div
-			class='flex flex-col justify-between items-start gap-4 p-4 bg-gradient-to-t from-white/5 via-gray-950 to-black'
+			class='h-full flex flex-col justify-between items-start gap-4 p-4 bg-gradient-to-t from-white/5 via-gray-950 to-black'
 		>
 			<p class='font-bold'>{project.name}</p>
 			<p class='text-sm text-gray-400'>{project.description}</p>
@@ -35,7 +35,7 @@ const { project } = Astro.props;
 					href={project.repository}
 					target='_blank'
 					rel='noreferrer'
-					class='cursor-pointer text-sm flex items-center justify-between gap-2 hover:bg-white/20 transition-colors duration-150 ease-in-out py-2 px-3 rounded'
+					class='cursor-pointer text-sm flex items-center justify-between gap-2 hover:bg-white/20 transition-colors duration-200 ease-in-out p-3 rounded'
 					><img src={github} width={18} /> Ver código</a
 				>
 			</footer>
