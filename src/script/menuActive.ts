@@ -1,22 +1,19 @@
-const $listItems = document.querySelectorAll(
-  '#navLink'
-) as NodeListOf<Element>;
-const $indicator = document.getElementById('indicator') as HTMLElement;
+export function menuActive (links: NodeListOf<Element>, indicator: HTMLDivElement) {
+  links.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const { left, top, width, height } = item.getBoundingClientRect();
 
-$listItems.forEach((item) => {
-  item.addEventListener('mouseenter', () => {
-    const { left, top, width, height } = item.getBoundingClientRect();
+      Object.entries({ left, top, width, height }).forEach(([key, value]) => {
+        indicator.style.setProperty(key, `${value}px`);
+      });
 
-    Object.entries({ left, top, width, height }).forEach(([key, value]) => {
-      $indicator.style.setProperty(key, `${value}px`);
+      indicator.style.opacity = '1';
+      indicator.style.visibility = 'visible';
     });
 
-    $indicator.style.opacity = '1';
-    $indicator.style.visibility = 'visible';
-  });
-
-  item.addEventListener('mouseleave', () => {
-    $indicator.style.opacity = '0';
-    $indicator.style.visibility = 'hidden';
-  });
-});
+    item.addEventListener('mouseleave', () => {
+      indicator.style.opacity = '0';
+      indicator.style.visibility = 'hidden';
+    });
+  })
+}

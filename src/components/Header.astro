@@ -3,39 +3,13 @@ import Menu from "./Menu.astro";
 import menuIcon from "/icons/menu-hamburger.svg";
 ---
 
-<script src='../script/menuActive.ts'></script>
-
 <script>
+	import { togglePanel } from "../script/togglePanel";
 	const $panel = document.getElementById("panel");
-	document.addEventListener("click", (e) => {
-		if (
-			(e.target && (e.target as Element).matches("#btn-open")) ||
-			(e.target as Element).matches("#btn-open *")
-		) {
-			e.preventDefault();
-			console.log("abrir");
-			if ($panel instanceof HTMLElement) {
-				$panel.classList.toggle("top-0");
-				$panel.classList.toggle("-top-full");
-				document.getElementById("app").classList.toggle("blur-sm");
-				document.body.style.overflow = "hidden";
-			}
-		}
 
-		if (
-			(e.target && (e.target as Element).matches("#btn-close")) ||
-			(e.target as Element).matches("#btn-close *")
-		) {
-			e.preventDefault();
-			console.log("cerrar");
-			if ($panel !== null) {
-				$panel.classList.toggle("top-0");
-				$panel.classList.toggle("-top-full");
-				document.body.style.overflow = "visible";
-				document.getElementById("app").classList.toggle("blur-sm");
-			}
-		}
-	});
+	if ($panel instanceof HTMLElement) {
+		togglePanel($panel, "#btn-open");
+	}
 </script>
 
 <header
