@@ -6,34 +6,34 @@ import Avatar from "../components/Avatar.astro";
 ---
 
 <section
-	id='home'
-	class='relative w-full lg:h-[620px] flex justify-center items-center max-sm:items-start max-sm:p-8'
+  id='home'
+  class='relative w-full lg:h-screen flex justify-center items-center max-sm:items-start max-sm:p-8'
 >
-	<div
-		class='w-2/3 flex justify-between items-center max-sm:gap-4 max-sm:w-full max-sm:flex-col-reverse z-10'
-	>
-		<!-- DESCRIPTION -->
-		<div class='flex flex-col gap-10'>
-			<header class='flex flex-col items-center xl:items-start gap-2'>
-				<h2 class='lg:text-5xl text-xl font-extrabold tracking-wide'>
-					Enrique Salinas Franco <span
-						class='animate-say inline-block origin-center'>👋🏼</span
-					>
-				</h2>
-				<h3
-					class='text-xl max-sm:text-sm tracking-wide text-slate-400 leading-8'
-				>
-					Desarrollador Frontend.
-				</h3>
-			</header>
-			<!-- CONOCIMIENTOS Y REDES SOCIALES -->
-			<div class='flex flex-col gap-10'>
-				<ListKnowledge />
-				<ContactForms />
-			</div>
-		</div>
-		<!-- IMAGEN -->
-		<Avatar />
-	</div>
-	<Blob />
+  <div
+    class='w-2/3 h-2/3 flex justify-between items-start max-sm:gap-4 max-sm:w-full max-sm:flex-col-reverse z-10'
+  >
+    <!-- DESCRIPTION -->
+    <div class='flex flex-col gap-10'>
+      <header class='flex flex-col items-center xl:items-start gap-2'>
+        <h2 class='lg:text-5xl text-xl font-bold tracking-wide'>
+          Enrique Salinas Franco <span
+            class='animate-say inline-block origin-center'>👋</span
+          >
+        </h2>
+        <h3
+          class='text-xl max-sm:text-sm tracking-wide text-transparent bg-clip-text bg-gradient-to-tr from-green-400 to-blue-600'
+        >
+          Desarrollador Frontend.
+        </h3>
+      </header>
+      <!-- CONOCIMIENTOS Y REDES SOCIALES -->
+      <div class='flex flex-col gap-10'>
+        <ListKnowledge />
+        <ContactForms />
+      </div>
+    </div>
+    <!-- IMAGEN -->
+    <Avatar />
+  </div>
+  <Blob />
 </section>

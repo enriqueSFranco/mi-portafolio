@@ -1,13 +1,13 @@
 ---
-import LayoutSection from '../layouts/LayoutSection.astro';
-import data from '../api/data.json';
-import Project from '../components/Project.astro';
+import LayoutSection from "../layouts/LayoutSection.astro";
+import data from "../api/data.json";
+import Project from "../components/Project.astro";
 
 const PROJECTS = data.projects;
 ---
 
 <LayoutSection sectionTitle='proyectos' sectionId='projects'>
-	<ul class='h-full xl:w-2/3 grid grid-cols-2 gap-6 max-sm:grid-cols-1'>
-		{PROJECTS.map((project) => <Project project={project} />)}
-	</ul>
+  <ul class='h-full xl:w-2/3 grid grid-cols-2 gap-6 max-sm:grid-cols-1'>
+    {PROJECTS.map((project) => <Project project={project} />)}
+  </ul>
 </LayoutSection>

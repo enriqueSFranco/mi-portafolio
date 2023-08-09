@@ -5,30 +5,32 @@ import closeIcon from "/icons/close.svg";
 ---
 
 <script>
-	import { togglePanel } from "../script/togglePanel";
-	const $panel = document.getElementById("panel");
+  import { togglePanel } from "../script/togglePanel";
+  const $panel = document.getElementById("panel");
 
-	if ($panel instanceof HTMLElement) {
-		togglePanel($panel, "#btn-close");
-	}
+  if ($panel instanceof HTMLElement) {
+    togglePanel($panel, "#btn-close", "#navLink");
+  }
 </script>
 
 <aside
-	id='panel'
-	class='w-full h-1/3 bg-gradient-to-t from-white/10 via-black to-black fixed max-sm:rounded-b-lg -top-full z-10 transition-all duration-300 ease-in'
+  id='panel'
+  class='w-full h-1/3 bg-black fixed max-sm:rounded-b-lg -top-full z-10 transition-all duration-300 ease-in'
 >
-	<header class='flex justify-end h-16'>
-		<button id='btn-close' class='px-4' aria-label='button close menu'>
-			<img src={closeIcon} alt='close icon' />
-		</button>
-	</header>
-	<nav class='h-16 w-full'>
-		<ul class='flex flex-col items-start h-full text-white'>
-			{
-				MENU.map((item) => {
-					return <ItemMenu item={item} />;
-				})
-			}
-		</ul>
-	</nav>
+  <header class='flex justify-end h-12'>
+    <button id='btn-close' class='px-4' aria-label='button close menu'>
+      <img src={closeIcon} alt='close icon' />
+    </button>
+  </header>
+  <nav>
+    <ul
+      class='flex flex-col justify-between items-start gap-5 h-full text-white'
+    >
+      {
+        MENU.map((item) => {
+          return <ItemMenu item={item} />;
+        })
+      }
+    </ul>
+  </nav>
 </aside>
