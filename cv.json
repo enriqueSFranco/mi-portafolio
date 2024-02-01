@@ -5,8 +5,8 @@
     "image": "",
     "email": "enrique.sfranco04@gmail.com",
     "phone": "(912) 555-4321",
-    "url": "https://johndoe.com",
-    "summary": "A summary of John Doe…",
+    "url": "",
+    "summary": "",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
@@ -17,8 +17,8 @@
     "profiles": [
       {
         "network": "Twitter",
-        "username": "john",
-        "url": "https://twitter.com/john"
+        "username": "kike",
+        "url": ""
       }
     ]
   },
@@ -46,14 +46,12 @@
   ],
   "education": [
     {
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
+      "institution": "Escuela Superior de Computo",
+      "url": "https://www.escom.ipn.mx/",
+      "area": "Ingenieria en Sistemas Computacionales",
+      "studyType": "Universidad",
+      "startDate": "2017-01-01",
+      "endDate": "2023-01-01"
     }
   ],
   "awards": [
@@ -110,7 +108,7 @@
   ],
   "references": [
     {
-      "name": "Jane Doe",
+      "name": "Kike SFranco",
       "reference": "Reference…"
     }
   ],
