@@ -26,7 +26,9 @@ const { title } = Astro.props;
     <meta name='author' content='Enrique SFranco' />
     <title>{title}</title>
   </head>
-  <body class='bg-[#17181C] text-white text-base font-poppins'>
+  <body
+    class='w-full grid place-items-center bg-gray-200 text-black text-base font-poppins'
+  >
     <slot />
   </body>
 </html>
