@@ -1,0 +1,87 @@
+{
+  "basics": {
+    "name": "Kike SFranco",
+    "label": "Programmer",
+    "image": "",
+    "email": "enrique.sfranco04@gmail.com",
+    "summary": "",
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "enriqueSFranco",
+        "url": ""
+      },
+      {
+        "network": "Linkedin",
+        "username": "enriqueSFranco",
+        "url": ""
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Escuela Superior de Cómputo - IPN",
+      "url": "https://www.escom.ipn.mx/",
+      "area": "Ingenieria en Sistemas Computacionales",
+      "studyType": "Universidad",
+      "startDate": "2017-01-01",
+      "endDate": "2023-01-01"
+    }
+  ],
+  "skills": [
+    "html5",
+    "css3",
+    "javascript",
+    "typescript",
+    "react",
+    "git",
+    "tailwindcss"
+  ],
+  "experience": [
+    {
+      "id": 0,
+      "name": "Bolsa de Trabajo ESCOM (Proyecto de Tesis) | Enero 2022 – Enero 2023",
+      "description": "Sistema que usa la API de Cohere para identificar mensajes tóxicos en tiempo real en el chat de Twitch.",
+      "startDate": "",
+      "endDate": "",
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/toxicity-detection"
+    },
+    {
+      "id": 1,
+      "name": "Detección de Toxicidad en Chat de Twitch",
+      "description": "Sistema que usa la API de Cohere para identificar mensajes tóxicos en tiempo real en el chat de Twitch.",
+      "startDate": "",
+      "endDate": "",
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/toxicity-detection"
+    },
+    {
+      "id": 2,
+      "name": "quick-cv",
+      "description": "Crea tu CV con facilidad. La app quick-cv, desarrollada con React, Zustand, Tailwind y TypeScript, te ofrece una experiencia fluida para destacar en tu búsqueda de empleo.",
+      "startDate": "",
+      "endDate": "",
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/quick-cv"
+    },
+    {
+      "id": 3,
+      "name": "PostCraft",
+      "description": "Adivina el nombre del Pokémon basándote en imágenes y pistas. ¡Conviértete en un Maestro Pokémon!",
+      "startDate": "",
+      "endDate": "",
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/PostCraft"
+    },
+    {
+      "id": 4,
+      "name": "Landing Page Tesla",
+      "description": "Clon de la landing page de Tesla ⚡️. Desarrollado con HTML, JavaScript, Astro y Tailwind.",
+      "startDate": "",
+      "endDate": "",
+      "deploy": "",
+      "repository": "https://github.com/enriqueSFranco/landing-page-tesla"
+    }
+  ]
+}
