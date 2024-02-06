@@ -29,13 +29,19 @@
     }
   ],
   "skills": [
-    "html5",
-    "css3",
-    "javascript",
-    "typescript",
-    "react",
-    "git",
-    "tailwindcss"
+    {
+      "name": "Web Development",
+      "level": "Junior",
+      "keywords": [
+        "HTML5",
+        "CSS3",
+        "Tailwindcss",
+        "JavaScript",
+        "Typescript",
+        "React js",
+        "Git"
+      ]
+    }
   ],
   "experience": [
     {
