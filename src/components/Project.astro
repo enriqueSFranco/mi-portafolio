@@ -1,7 +1,5 @@
 ---
-import type { Project } from "../share/types";
-import Chip from "./Chip.astro";
-import github from "../assets/icons/github.svg";
+import type { Project } from "@/share/types";
 
 interface Props {
   project: Project;
@@ -12,20 +10,7 @@ const { project } = Astro.props;
 
 <li>
   <article class='flex flex-col overflow-hidden font-light tracking-wide'>
-    <!-- <Thumbnail name={project.name} thumbnail={project.thumbnail} /> -->
-    <div class='h-full flex flex-col justify-between items-start gap-2'>
-      <p class='font-bold'>{project.name}</p>
-      <p class='text-sm text-black'>{project.description}</p>
-
-      <footer class='w-full flex justify-end items-end flex-grow'>
-        <a
-          href={project.repository}
-          target='_blank'
-          rel='noreferrer'
-          class='cursor-pointer text-xs text-gray-500 hover:underline underline-offset-4 p-1 flex items-center justify-between gap-2'
-          >Ver código</a
-        >
-      </footer>
-    </div>
+    <p class='font-bold'>{project.name}</p>
+    <p class='text-sm text-black'>{project.description}</p>
   </article>
 </li>
