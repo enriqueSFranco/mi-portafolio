@@ -1,12 +1,13 @@
-<section
-  class='w-full font-poppins p-4 text-sm flex flex-col justify-center gap-1'
->
-  <h2 class='uppercase'>educación</h2>
-  <div class='w-full h-[.8px] bg-black'></div>
-  <article>
+---
+import "@/layouts/LayoutSection.astro";
+import LayoutSection from "@/layouts/LayoutSection.astro";
+---
+
+<LayoutSection sectionTitle='educación'>
+  <article class='font-light'>
     <p>Instituto Politécnico Nacional</p>
     <p>Escuela Superior de Cómputo</p>
     <p>Ingenieria en Sistemas Computacionales</p>
     <slot />
   </article>
-</section>
+</LayoutSection>

@@ -1,0 +1,23 @@
+---
+import "@/layouts/LayoutSection.astro";
+import LayoutSection from "@/layouts/LayoutSection.astro";
+import cv from "@/cv.json";
+
+const { skills } = cv;
+---
+
+<LayoutSection sectionTitle='conocimientos'>
+  <ul class='h-1/2 flex flex-wrap gap-3 font-light'>
+    {
+      skills.map(({ keywords }) =>
+        keywords.map((keyword) => (
+          <li>
+            <span class='bg-slate-950 text-white py-1.5 px-1 rounded-md'>
+              {keyword}
+            </span>
+          </li>
+        ))
+      )
+    }
+  </ul>
+</LayoutSection>
