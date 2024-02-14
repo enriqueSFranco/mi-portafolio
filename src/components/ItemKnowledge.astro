@@ -1,9 +1,0 @@
----
-import Chip from "./Chip.astro";
-const { skill } = Astro.props;
----
-
-<Chip class='grid place-items-center gap-2'>
-  <img src={`/icons/${skill}.svg`} alt={`skill-${skill}`} class='w-5' />
-  <span class='uppercase text-sm'>{skill}</span>
-</Chip>
