@@ -17,7 +17,7 @@ const { project } = Astro.props;
   <article class='flex flex-col overflow-hidden font-light leading-normal'>
     <h2 class='font-bold'>{project.name}</h2>
     <p class='text-sm mb-2'>{project.description}</p>
-    <ul class='list-disc space-y-1 list-inside dark:text-gray-300/80'>
+    <ul class='list-disc space-y-1 list-inside'>
       {project.highlights.map((highlight: string) => <li>{highlight}</li>)}
     </ul>
   </article>

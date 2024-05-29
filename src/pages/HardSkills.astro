@@ -1,7 +1,7 @@
 ---
 import "@/layouts/LayoutSection.astro";
 import LayoutSection from "@/layouts/LayoutSection.astro";
-import Chip from "@/components/Chip.astro";
+import Badge from "@/components/Badge.astro";
 import cv from "@/cv.json";
 
 const { hardSkills } = cv.skills;
@@ -10,9 +10,9 @@ const { hardSkills } = cv.skills;
 <LayoutSection sectionTitle='conocimientos técnicos'>
   <ul class='w-full h-full flex flex-wrap items-center gap-3 font-light'>
     {
-      hardSkills.map(({ text, bgColor, color, icon }) => (
+      hardSkills.map((text) => (
         <li>
-          <Chip text={text} />
+          <Badge>{text}</Badge>
         </li>
       ))
     }
