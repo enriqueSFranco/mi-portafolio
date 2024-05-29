@@ -1,33 +1,68 @@
 ---
-import IcGithub from "../assets/icons/github.svg";
-import IcLinkedin from "../assets/icons/linkedin.svg";
-import IcMaildotru from "../assets/icons/maildotru.svg";
+import IcGithub from "@/components/icons/IcGithub.astro";
+import IcLinkedin from "@/components/icons/IcLinkedin.astro";
+import IcMaildotru from "@/components/icons/IcMaildotru.astro";
+import cv from "@/cv.json";
+import meSrc from "@/assets/images/me.jpeg";
+
+const { email, name, profiles, job } = cv.basic;
+
+const SOCIAL_NETWORK: Record<string, any> = {
+  github: IcGithub,
+  linkedin: IcLinkedin,
+};
 ---
 
-<header
-  class='w-full flex flex-col items-start justify-start gap-2 font-light text-sm leading-normal'
->
-  <h2 class='text-2xl text-gray-300/95 font-bold'>Enrique Salinas Franco</h2>
-  <h3 class='text-lg text-green-800 dark:text-green-500 capitalize font-bold'>
-    desarrollador frontend
-  </h3>
-  <ul class='w-full flex justify-start gap-4'>
-    <li>
-      <a href='#' class='text-gray-400/95 flex items-center gap-2'
-        ><img src={IcMaildotru} />enrique.sfranco04@gmail.com</a
+<header class='w-full font-light text-sm leading-normal'>
+  <div class='w-full flex flex-row-reverse justify-between'>
+    <figure class='w-24 h-24 overflow-hidden rounded-md'>
+      <img
+        class='w-full h-full object-cover object-top'
+        src={meSrc}
+        alt={name}
+      />
+    </figure>
+    <div class='flex flex-col items-start justify-start gap-2'>
+      <h2 class='text-2xl text-gray-300/80 font-bold'>{name}</h2>
+      <h3
+        class='bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 text-lg capitalize bg-clip-text font-bold inline-block text-transparent'
       >
-    </li>
-    <li>
-      <a
-        href='https://github.com/enriqueSFranco'
-        class='text-gray-400/95 flex items-center gap-2'
-        ><img src={IcGithub} />enriqueSFranco</a
-      >
-    </li>
-    <li>
-      <a href='#' class='text-gray-400/95 flex items-center gap-2'
-        ><img src={IcLinkedin} />enriqueSFranco</a
-      >
-    </li>
-  </ul>
+        {job}
+      </h3>
+      <ul class='w-full flex justify-start gap-4'>
+        <li>
+          <a
+            href={`mailto:${email}`}
+            target='_blank'
+            aria-label={`Enviar correo electrónico a ${email}`}
+            title={`Enviar correo electrónico a ${email}`}
+            tabindex='0'
+            class='text-gray-300/80 flex items-center gap-2 transition-colors duration-300 ease-in-out hover:text-gray-200'
+            ><IcMaildotru />{email}</a
+          >
+        </li>
+        {
+          profiles.map(({ network, url, username }, idx) => {
+            const IcNetwork = SOCIAL_NETWORK[network];
+            return (
+              <li>
+                <a
+                  href={url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label={`Visitar perfil de ${username} en ${network}`}
+                  title={`Visitar perfil de ${username} en ${network}`}
+                  tabindex={`${idx + 1}`}
+                  class='text-gray-300/80 flex items-center gap-2 transition-colors duration-300 ease-in-out hover:text-gray-200'
+                >
+                  <IcNetwork />
+                  {username}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </div>
 </header>

@@ -7,7 +7,7 @@ const PROJECTS = cv.experience;
 ---
 
 <LayoutSection sectionTitle='proyectos'>
-  <ul class='h-full w-full'>
+  <ul class='h-full w-full flex flex-col gap-4'>
     {PROJECTS.map((project) => <Project project={project} />)}
   </ul>
 </LayoutSection>
