@@ -1,18 +1,17 @@
 {
-  "basics": {
-    "name": "Kike SFranco",
-    "label": "Programmer",
-    "image": "",
+  "basic": {
+    "name": "Enrique Salinas Franco",
+    "job": "desarrollador frontend",
     "email": "enrique.sfranco04@gmail.com",
     "summary": "",
     "profiles": [
       {
-        "network": "Github",
+        "network": "github",
         "username": "enriqueSFranco",
         "url": ""
       },
       {
-        "network": "Linkedin",
+        "network": "linkedin",
         "username": "enriqueSFranco",
         "url": ""
       }
@@ -24,57 +23,73 @@
       "url": "https://www.escom.ipn.mx/",
       "area": "Ingenieria en Sistemas Computacionales",
       "studyType": "Universidad",
-      "startDate": "2017-01-01",
-      "endDate": "2023-01-01"
+      "startDate": "2017",
+      "endDate": "2023"
     }
   ],
   "skills": {
     "hardSkills": [
-      { "text": "HTML5", "bgColor": "#E5DCFF", "color": "#7F52FF", "icon": "" },
-      { "text": "CSS3", "bgColor": "#E5F6FF", "color": "#1E88E5", "icon": "" },
+      {
+        "text": "HTML5",
+        "bgColor": "#e34f264d",
+        "color": "#E34F26",
+        "icon": ""
+      },
+      {
+        "text": "CSS3",
+        "bgColor": "#1573b664",
+        "color": "#1572B6",
+        "icon": ""
+      },
       {
         "text": "Tailwind CSS",
-        "bgColor": "#D9FAF2",
-        "color": "#38B2AC",
+        "bgColor": "#06b5d44b",
+        "color": "#06B6D4",
         "icon": ""
       },
       {
         "text": "JavaScript",
-        "bgColor": "#FFF2CC",
-        "color": "#F57C00",
+        "bgColor": "#f7de1e54",
+        "color": "#F7DF1E",
         "icon": ""
       },
       {
         "text": "TypeScript",
-        "bgColor": "#C9E3FF",
+        "bgColor": "#3179c660",
         "color": "#2962FF",
         "icon": ""
       },
       {
+        "text": "React.js",
+        "bgColor": "#3dcff730",
+        "color": "#61DAFB",
+        "icon": ""
+      },
+      {
         "text": "React Native - Básico",
-        "bgColor": "#E1F5FE",
-        "color": "#0277BD",
+        "bgColor": "#3dcff730",
+        "color": "#61DAFB",
         "icon": ""
       },
       {
         "text": "Kotlin - Básico",
-        "bgColor": "#E5DCFF",
+        "bgColor": "#8052ff4e",
         "color": "#7F52FF",
         "icon": ""
       },
-      { "text": "Git", "bgColor": "#FFEBEE", "color": "#E57373", "icon": "" }
+      { "text": "Git", "bgColor": "#f04e3257", "color": "#F05032", "icon": "" }
     ],
     "softSkills": [
-      { "text": "Disciplina", "bgColor": "#FCE4EC", "color": "#D81B60" },
-      { "text": "Autogestión", "bgColor": "#E0F7FA", "color": "#00ACC1" },
-      { "text": "Empatía", "bgColor": "#FFEBEE", "color": "#D32F2F" },
+      { "text": "Disciplina", "bgColor": "#047af05c", "color": "#188afc" },
+      { "text": "Autogestión", "bgColor": "#2ecc7052", "color": "#2ecc71" },
+      { "text": "Empatía", "bgColor": "#ffb6c150", "color": "#ffb6c1" },
       {
         "text": "Adaptación al cambio",
-        "bgColor": "#CCFF90",
-        "color": "#33691E"
+        "bgColor": "#ffd90053",
+        "color": "#ffd700"
       },
-      { "text": "Perseverancia", "bgColor": "#FFD180", "color": "#F57C00" },
-      { "text": "Curiosidad", "bgColor": "#E1F5FE", "color": "#0277BD" }
+      { "text": "Perseverancia", "bgColor": "#ff000049", "color": "#ff0000" },
+      { "text": "Curiosidad", "bgColor": "#ff80004e", "color": "#ff7f00" }
     ]
   },
   "experience": [
