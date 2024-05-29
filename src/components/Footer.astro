@@ -1,12 +1,28 @@
-<footer
-  class='bg-secondary-gray h-24 text-sm font-light grid place-items-center'
->
-  <p>
-    coded with 💙 by <a
-      href='https://github.com/enriqueSFranco'
-      target='_blank'
-      rel='noreferrer'
-      class='text-sky-700'>@enriqueSFranco</a
-    >
-  </p>
-</footer>
+<ninja-keys></ninja-keys>
+
+<script>
+  import "ninja-keys";
+
+  const ninja = document.querySelector("ninja-keys");
+
+  if (ninja !== null) {
+    ninja.data = [
+      {
+        id: "actions",
+        title: "Imprimir",
+        hotkey: "ctrl+K",
+        icon: "🖨️",
+        section: "Acciones",
+        handler: () => window.print(),
+      },
+    ];
+  }
+</script>
+
+<style>
+  @media print {
+    ninja-keys {
+      display: block !important;
+    }
+  }
+</style>

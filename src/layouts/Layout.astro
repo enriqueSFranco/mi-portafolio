@@ -21,13 +21,13 @@ const { title } = Astro.props;
     />
     <meta
       name='description'
-      content='portafolio, Frontend Developer, Desarrollo Web, HTML5, CSS3, React, Vue, Javascript, Typescript, Tailwind'
+      content='curriculum vitae, cv, Frontend Developer, Desarrollo Web'
     />
     <meta name='author' content='Enrique SFranco' />
     <title>{title}</title>
   </head>
   <body
-    class='w-full grid place-items-center bg-gray-200 text-black text-base font-poppins'
+    class='w-full grid place-items-center dark:bg-black text-white text-base font-poppins p-8'
   >
     <slot />
   </body>
@@ -44,5 +44,19 @@ const { title } = Astro.props;
   }
   [id] {
     scroll-margin-top: 4rem;
+  }
+
+  @media print {
+    /* Estilos para la impresión */
+    main {
+      padding: 4rem;
+      margin: auto;
+      width: 100%;
+    }
+    @media (width <= 700px) {
+      main {
+        padding: 2rem;
+      }
+    }
   }
 </style>
