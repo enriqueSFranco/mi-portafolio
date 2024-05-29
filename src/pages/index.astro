@@ -1,23 +1,26 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Footer from "@/components/Footer.astro";
 import Projects from "./Projects.astro";
 import ProfessionalProfile from "./ProfessionalProfile.astro";
 import Education from "./Education.astro";
 import Basic from "./Basic.astro";
 import HardSkills from "./HardSkills.astro";
+import SoftSkills from "./SoftSkills.astro";
+import cv from "@/cv.json";
+
+const { name, job } = cv.basic;
 ---
 
-<Layout title='kike SF | Frontend Developer'>
+<Layout title={`Portafolio de ${name} - ${job}`}>
   <main
     id='app'
-    class='w-2/4 h-full flex flex-col justify-center gap-6 dark:bg-black rounded-lg p-4'
+    class='max-w-3xl h-full flex flex-col justify-center gap-6 dark:bg-black rounded-lg p-8'
   >
     <Basic />
     <Education />
     <ProfessionalProfile />
     <Projects />
     <HardSkills />
+    <SoftSkills />
   </main>
-  <Footer />
 </Layout>
