@@ -7,8 +7,12 @@ const { sectionTitle } = Astro.props;
 ---
 
 <section
-  class='w-full h-full font-poppins text-sm font-light flex justify-start gap-8 text-gray-400/95'
+  class='w-full h-full text-sm font-light flex justify-start gap-4 text-gray-300/80'
 >
-  <h2 class='uppercase text-balance text-gray-300/95'>{sectionTitle}</h2>
+  <header>
+    <h2 class='uppercase w-32 text-balance text-gray-300 font-bold'>
+      {sectionTitle}
+    </h2>
+  </header>
   <slot />
 </section>
