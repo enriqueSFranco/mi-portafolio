@@ -1,18 +1,19 @@
 ---
-import type { ItemMenu } from '../share/types';
+import type { ItemMenu } from "../share/types";
 
 interface Props {
-	item: ItemMenu;
+  item: ItemMenu;
 }
 const { item } = Astro.props;
 ---
 
 <li>
-	<a
-		href={item.href}
-		class='capitalize p-2 h-1/2 flex items-center gap-2'
-		id='navLink'>
-		<img src={`/icons/${item.icon}.svg`} alt={`icon-${item.title}`} />
-		{item.title}
-	</a>
+  <a
+    href={item.href}
+    class='capitalize p-2 flex items-center gap-2 font-light'
+    id='navLink'
+  >
+    <img src={`/icons/${item.icon}.svg`} alt={`icon-${item.title}`} />
+    {item.title}
+  </a>
 </li>

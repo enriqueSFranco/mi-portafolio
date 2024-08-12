@@ -45,18 +45,19 @@
     },
     {
       "id": 2,
-      "name": "cv-easy",
-      "description": "Crea tu CV con facilidad. La app cv-easy, desarrollada con React, Zustand, Tailwind y TypeScript, te ofrece una experiencia fluida para destacar en tu búsqueda de empleo.",
-      "thumbnail": "cv-easy.png",
+      "name": "quick-cv",
+      "description": "Crea tu CV con facilidad. La app quick-cv, desarrollada con React, Zustand, Tailwind y TypeScript, te ofrece una experiencia fluida para destacar en tu búsqueda de empleo.",
+      "thumbnail": "quick-cv.png",
       "skills": [
-        "react",
+        "Vuejs",
+        "Pinia",
         "typescript",
         "tailwind",
-        "react-pdf/renderer",
-        "zustand"
+        "pdfjs-dist",
+        "PDF Make"
       ],
       "deploy": "",
-      "repository": "https://github.com/enriqueSFranco/cv-easy"
+      "repository": "https://github.com/enriqueSFranco/quick-cv"
     },
     {
       "id": 3,
