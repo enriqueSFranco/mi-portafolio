@@ -1,20 +1,16 @@
 ---
 export interface Props {
   sectionTitle: string;
-  sectionId: string;
 }
 
-const { sectionTitle, sectionId } = Astro.props;
+const { sectionTitle } = Astro.props;
 ---
 
 <section
-  class='w-full lg:h-screen font-poppins p-8 flex flex-col justify-center xl:items-center gap-6'
-  id={sectionId}
+  class='w-full h-full text-sm font-light flex justify-start gap-4 text-white'
 >
-  <header class='h-10'>
-    <h2
-      class='xl:text-4xl text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-green-400 to-blue-600 capitalize tracking-wide'
-    >
+  <header>
+    <h2 class='uppercase w-32 text-balance font-bold'>
       {sectionTitle}
     </h2>
   </header>

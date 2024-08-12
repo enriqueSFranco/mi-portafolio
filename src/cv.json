@@ -1,0 +1,74 @@
+{
+  "basic": {
+    "name": "Enrique",
+    "job": "desarrollador frontend",
+    "email": "enrique.sfranco04@gmail.com",
+    "summary": "",
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "enriqueSFranco",
+        "url": ""
+      },
+      {
+        "network": "Linkedin",
+        "username": "enriqueSFranco",
+        "url": ""
+      }
+    ]
+  },
+  "profile": "Desarrollador Frontend con un sólido conocimiento de las tecnologías modernas de desarrollo web, incluyendo JavaScript, TypeScript y React.js. Además, cuento con un conocimiento básico de React Native, lo que me permite extender mis habilidades al desarrollo de aplicaciones móviles multiplataforma.",
+  "education": [
+    {
+      "institution": "Escuela Superior de Cómputo - IPN",
+      "url": "https://www.escom.ipn.mx/",
+      "area": "Ingenieria en Sistemas Computacionales",
+      "studyType": "Universidad",
+      "startDate": "2017",
+      "endDate": "2023"
+    }
+  ],
+  "skills": {
+    "hardSkills": [
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "JavaScript",
+      "TypeScript",
+      "React.js",
+      "React Native - Básico",
+      "Kotlin - Básico",
+      "Git"
+    ],
+    "softSkills": [
+      "Disciplina",
+      "Autogestión",
+      "Empatía",
+      "Adaptación al cambio",
+      "Perseverancia"
+    ]
+  },
+  "experience": [
+    {
+      "id": 0,
+      "name": "Bolsa de Trabajo ESCOM (Proyecto de Tesis) | Enero 2022 – Enero 2023",
+      "description": "Sistema web que facilita la búsqueda y postulación de empleo para los alumnos de ESCOM, a la vez utiliza un algoritmo de recomendación para sugerir vacantes que mejor se adapten a las habilidades y conocimientos de los alumnos.",
+      "highlights": [
+        "Trabajé de forma eficaz enunequipomultidisciplinario,compartiendoideasycontribuyendoactivamenteala toma de decisiones del grupo.",
+        "Aprendí a abordar desafíos técnicos y funcionales de manera efectiva, buscando soluciones innovadoras en conjunto con mis compañeros de equipo.",
+        "Me adapté rápidamente a los cambios en los requisitos del proyecto y a las necesidades del cliente, ajustando mis enfoques y prioridades según fuera necesario.",
+        "Adquirí experiencia en el desarrollo tanto del frontend como del backend, lo que me permitió comprender el ciclo completo de desarrollo de software y crear una solución completa y funcional para el proyecto."
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Detección de Toxicidad en Chat de Twitch",
+      "description": "Aplicación para detectar en tiempo real mensajes que contengan lenguaje tóxico en las comunidades de canales de Twitch.",
+      "highlights": [
+        "Reforcé mis habilidades en desarrollo frontend y backend.",
+        "Mejoré mi capacidad para integrar APIs externas en aplicaciones web.",
+        "Aprendí a trabajar de manera autónoma en un proyecto desde la concepción hasta la implementación, gestionando eficazmente el tiempo y los recursos."
+      ]
+    }
+  ]
+}
