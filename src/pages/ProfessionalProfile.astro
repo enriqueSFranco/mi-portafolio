@@ -1,7 +1,16 @@
 ---
 import LayoutSection from "../layouts/LayoutSection.astro";
+import cv from "@/cv.json";
+
+const { profile } = cv;
 ---
 
+<<<<<<< HEAD
+<LayoutSection sectionTitle='perfil profesional'>
+  <p class='leading-normal text-balance'>
+    {profile}
+  </p>
+=======
 <LayoutSection
   sectionId='professional-profile'
   sectionTitle='perfil profesional'
@@ -68,4 +77,5 @@ import LayoutSection from "../layouts/LayoutSection.astro";
       </div>
     </article>
   </div>
+>>>>>>> origin/develop
 </LayoutSection>
