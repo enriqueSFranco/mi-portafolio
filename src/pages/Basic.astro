@@ -26,9 +26,9 @@ const SOCIAL_NETWORK: Record<string, any> = {
     
     <div class="leading-snug flex flex-col text-center text-5xl font-semibold">
       <h2 class='text-2xl font-normal flex justify-center items-center gap-2 text-center leading-relaxed'>
-        Hey, soy {name} 👋  <Badge bgColor="#19c9644f" textColor="#19c964">Disponible para trabajar</Badge>
+        Hey, soy {name} 👋  <Badge>Disponible para trabajar</Badge>
       </h2>
-      <h2 class=''>
+      <h2>
         fronted develoer web
       </h2>
       <p>
@@ -43,23 +43,20 @@ const SOCIAL_NETWORK: Record<string, any> = {
   </div>
     <ul class='flex items-center justify-start gap-4 self-start'>
       <li>
-        <Badge bgColor="#fff" textColor="#000">
           <a
             href={`mailto:${email}`}
             target='_blank'
             aria-label={`Enviar correo electrónico a ${email}`}
             title={`Enviar correo electrónico a ${email}`}
             tabindex='0'
-            class='flex items-center gap-2 text-xs'><IcMaildotru />{email}</a
+            class='bg-white/20 flex items-center gap-2 text-xs px-3 py-1.5 rounded-full'><IcMaildotru />{email}</a
           >
-        </Badge>
       </li>
       {
         profiles.map(({ network, url, username }, idx) => {
           const IcNetwork = SOCIAL_NETWORK[network.toLowerCase()];
           return (
             <li>
-              <Badge bgColor="#fff" textColor="#000">
                 <a
                   href={url}
                   target='_blank'
@@ -67,12 +64,11 @@ const SOCIAL_NETWORK: Record<string, any> = {
                   aria-label={`Visitar perfil de ${username} en ${network}`}
                   title={`Visitar perfil de ${username} en ${network}`}
                   tabindex={`${idx + 1}`}
-                  class='flex items-center gap-2 text-xs'
+                  class='bg-white/20 flex items-center gap-2 text-xs px-3 py-1.5 rounded-full'
                 >
                   <IcNetwork />
-                  {username}
+                  {network}
                 </a>
-              </Badge>
             </li>
           );
         })
