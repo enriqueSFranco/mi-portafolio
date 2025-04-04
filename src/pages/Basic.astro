@@ -3,7 +3,7 @@ import IcGithub from "@/components/icons/IcGithub.astro";
 import IcLinkedin from "@/components/icons/IcLinkedin.astro";
 import IcMaildotru from "@/components/icons/IcMaildotru.astro";
 import cv from "@/cv.json";
-import meSrc from "@/assets/images/me.jpeg";
+import meSrc from "@/assets/me.jpeg";
 import Badge from "@/components/Badge.astro";
 
 const { email, name, profiles, job } = cv.basic;
@@ -14,61 +14,68 @@ const SOCIAL_NETWORK: Record<string, any> = {
 };
 ---
 
-<header class='w-full font-light text-sm leading-normal'>
-  <div class='w-full flex flex-col justify-start'>
-    <figure class='w-12 h-12 overflow-hidden rounded-full'>
+<section class='relative w-full font-light text-sm leading-normal flex flex-col items-center justify-center gap-4'>
+  <div class="flex flex-col items-center gap-4">
+    <figure class='w-32 h-32 overflow-hidden rounded-full'>
       <img
         class='w-full h-full object-cover object-top'
         src={meSrc}
         alt={name}
       />
     </figure>
-    <div class='flex flex-col items-start justify-start gap-2'>
-      <h2 class='text-2xl font-bold'>
-        Hey, soy {name}
+    
+    <div class="leading-snug flex flex-col text-center text-5xl font-semibold">
+      <h2 class='text-2xl font-normal flex justify-center items-center gap-2 text-center leading-relaxed'>
+        Hey, soy {name} 👋  <Badge bgColor="#19c9644f" textColor="#19c964">Disponible para trabajar</Badge>
       </h2>
-      <h3
-        class='bg-gradient-to-tr from-green-300 via-blue-500 to-purple-600 text-lg capitalize bg-clip-text font-bold inline-block text-transparent'
-      >
-        {job}
-      </h3>
-      <ul class='w-full flex justify-start gap-4'>
-        <li>
-          <Badge>
-            <a
-              href={`mailto:${email}`}
-              target='_blank'
-              aria-label={`Enviar correo electrónico a ${email}`}
-              title={`Enviar correo electrónico a ${email}`}
-              tabindex='0'
-              class='flex items-center gap-2'><IcMaildotru />{email}</a
-            >
-          </Badge>
-        </li>
-        {
-          profiles.map(({ network, url, username }, idx) => {
-            const IcNetwork = SOCIAL_NETWORK[network.toLowerCase()];
-            return (
-              <li>
-                <Badge>
-                  <a
-                    href={url}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    aria-label={`Visitar perfil de ${username} en ${network}`}
-                    title={`Visitar perfil de ${username} en ${network}`}
-                    tabindex={`${idx + 1}`}
-                    class='flex items-center gap-2'
-                  >
-                    <IcNetwork />
-                    {network}
-                  </a>
-                </Badge>
-              </li>
-            );
-          })
-        }
-      </ul>
+      <h2 class=''>
+        fronted develoer web
+      </h2>
+      <p>
+        viviendo en México
+      </p>
+      <p class="text-sm text-gray-400 font-normal text-center max-w-xl leading-relaxed">
+  
+        Soy Frontend Developer con conocimientos en <em>JavaScript</em> y <em>React</em>, siempre buscando mejorar la
+        experiencia del usuario. 
+      </p>
     </div>
   </div>
-</header>
+    <ul class='flex items-center justify-start gap-4 self-start'>
+      <li>
+        <Badge bgColor="#fff" textColor="#000">
+          <a
+            href={`mailto:${email}`}
+            target='_blank'
+            aria-label={`Enviar correo electrónico a ${email}`}
+            title={`Enviar correo electrónico a ${email}`}
+            tabindex='0'
+            class='flex items-center gap-2 text-xs'><IcMaildotru />{email}</a
+          >
+        </Badge>
+      </li>
+      {
+        profiles.map(({ network, url, username }, idx) => {
+          const IcNetwork = SOCIAL_NETWORK[network.toLowerCase()];
+          return (
+            <li>
+              <Badge bgColor="#fff" textColor="#000">
+                <a
+                  href={url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  aria-label={`Visitar perfil de ${username} en ${network}`}
+                  title={`Visitar perfil de ${username} en ${network}`}
+                  tabindex={`${idx + 1}`}
+                  class='flex items-center gap-2 text-xs'
+                >
+                  <IcNetwork />
+                  {username}
+                </a>
+              </Badge>
+            </li>
+          );
+        })
+      }
+    </ul>
+</section>

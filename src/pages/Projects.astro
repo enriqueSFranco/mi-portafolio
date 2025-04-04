@@ -1,13 +1,20 @@
 ---
-import LayoutSection from "@/layouts/LayoutSection.astro";
 import cv from "@/cv.json";
+import IcGithub from "@/components/icons/IcGithub.astro"
 import Project from "@/components/Project.astro";
 
 const PROJECTS = cv.experience;
 ---
 
-<LayoutSection sectionTitle='proyectos'>
-  <ul class='h-full w-full flex flex-col gap-4'>
-    {PROJECTS.map((project) => <Project project={project} />)}
-  </ul>
-</LayoutSection>
+<section class='flex flex-col gap-1 justify-start items-start'>
+  <h2 class="text-2xl capitalize font-semibold">proyectos</h2>
+  <ol class="flex flex-col gap-4">      
+    {
+      PROJECTS.map((project) => (     
+      <li>            
+         <Project project={project} />
+      </li>
+      ))
+    }            
+  </ol>
+</section>
