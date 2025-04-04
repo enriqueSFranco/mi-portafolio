@@ -29,17 +29,7 @@
     }
   ],
   "skills": {
-    "hardSkills": [
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "JavaScript",
-      "TypeScript",
-      "React.js",
-      "React Native - Básico",
-      "Kotlin - Básico",
-      "Git"
-    ],
+    "hardSkills": ["JavaScript", "React", "React Native", "Python", "Git"],
     "softSkills": [
       "Disciplina",
       "Autogestión",
@@ -53,21 +43,36 @@
       "id": 0,
       "name": "Bolsa de Trabajo ESCOM (Proyecto de Tesis) | Enero 2022 – Enero 2023",
       "description": "Sistema web que facilita la búsqueda y postulación de empleo para los alumnos de ESCOM, a la vez utiliza un algoritmo de recomendación para sugerir vacantes que mejor se adapten a las habilidades y conocimientos de los alumnos.",
-      "highlights": [
-        "Trabajé de forma eficaz enunequipomultidisciplinario,compartiendoideasycontribuyendoactivamenteala toma de decisiones del grupo.",
-        "Aprendí a abordar desafíos técnicos y funcionales de manera efectiva, buscando soluciones innovadoras en conjunto con mis compañeros de equipo.",
-        "Me adapté rápidamente a los cambios en los requisitos del proyecto y a las necesidades del cliente, ajustando mis enfoques y prioridades según fuera necesario.",
-        "Adquirí experiencia en el desarrollo tanto del frontend como del backend, lo que me permitió comprender el ciclo completo de desarrollo de software y crear una solución completa y funcional para el proyecto."
+      "thumbnail": "bolsa-trabajo-escom.png",
+      "stackTech": [
+        "JavaScript",
+        "React",
+        "Styled Components",
+        "Python",
+        "DJango"
       ]
     },
     {
       "id": 1,
       "name": "Detección de Toxicidad en Chat de Twitch",
-      "description": "Aplicación para detectar en tiempo real mensajes que contengan lenguaje tóxico en las comunidades de canales de Twitch.",
-      "highlights": [
-        "Reforcé mis habilidades en desarrollo frontend y backend.",
-        "Mejoré mi capacidad para integrar APIs externas en aplicaciones web.",
-        "Aprendí a trabajar de manera autónoma en un proyecto desde la concepción hasta la implementación, gestionando eficazmente el tiempo y los recursos."
+      "description": "Desarrolle de forma autónoma una aplicación para detectar en tiempo real los mensajes con lenguaje tóxico en las comunidades de canales de Twitch.",
+      "thumbnail": "toxicity-detection.png",
+      "stackTech": ["Typescript", "React", "TailwindCss", "Nodejs", "Twitch"]
+    },
+    {
+      "id": 2,
+      "name": "Intellice CV",
+      "description": "Crea tu currículum profesional en minutos con inteligencia artificial. Desarrollada con Next.js, React, Tailwind CSS y Zustand",
+      "thumbnail": "intellince-cv.png",
+      "stackTech": [
+        "Typescript",
+        "React",
+        "Nextjs",
+        "Zustand",
+        "TailwindCss",
+        "TipTap",
+        "dnd-kit",
+        "PostgreSql"
       ]
     }
   ]

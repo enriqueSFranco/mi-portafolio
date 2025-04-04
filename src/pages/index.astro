@@ -1,11 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Projects from "./Projects.astro";
-import ProfessionalProfile from "./ProfessionalProfile.astro";
 import Education from "./Education.astro";
 import Basic from "./Basic.astro";
+import Footer from "@/components/Footer.astro";
 import HardSkills from "./HardSkills.astro";
-import SoftSkills from "./SoftSkills.astro";
 import cv from "@/cv.json";
 
 const { name, job } = cv.basic;
@@ -14,13 +13,12 @@ const { name, job } = cv.basic;
 <Layout title={`Portafolio de ${name} - ${job}`}>
   <main
     id='app'
-    class='max-w-3xl h-full flex flex-col justify-center gap-6 rounded-lg p-8'
+    class='flex grow flex-col gap-6 max-w-4xl text-sm'
   >
     <Basic />
     <Education />
-    <ProfessionalProfile />
     <Projects />
     <HardSkills />
-    <SoftSkills />
   </main>
+  <Footer />
 </Layout>

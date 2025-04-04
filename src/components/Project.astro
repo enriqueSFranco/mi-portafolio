@@ -1,24 +1,49 @@
 ---
 import type { Project } from "@/share/types.d";
+import { TAGS } from "@/share/constants.d";
 
 interface Props {
   project: {
-    id: number;
     name: string;
     description: string;
-    highlights: string[];
+    thumbnail: string,
+    stackTech: string[]
   };
 }
 
 const { project } = Astro.props;
+
 ---
 
-<li>
-  <article class='flex flex-col overflow-hidden font-light leading-normal'>
+<article class='grid grid-cols-2 gap-8 overflow-hidden w-full font-light'>
+
+  <div class="w-full">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 rounded-md overflow-clip w-full">
+      <img alt={`proyecto-${project.name}`} loading="lazy" class="object-cover object-top w-full h-56" src={`/images/${project.thumbnail}`}  />
+    </div>
+  </div>
+  
+  <div class="flex flex-col gap-4">
     <h2 class='font-bold'>{project.name}</h2>
-    <p class='text-sm mb-2'>{project.description}</p>
-    <ul class='list-disc space-y-1 list-inside'>
-      {project.highlights.map((highlight: string) => <li>{highlight}</li>)}
+    <p class='text-sm mb-2 w-full text-gray-400 leading-relaxed'>{project.description}</p>
+    <ul class="flex items-center gap-2 flex-wrap">
+      {project.stackTech.map(tech => {
+        const techKey = tech.replace(/\s+/g, '_').toUpperCase()
+        const tag = TAGS[techKey]
+        
+        if (!tag) return null
+        
+        const {class: className, name, icon} = tag
+
+        return (
+        <li class={`flex items-center gap-2`}>
+            <span class={`inline-flex rounded-full px-2 py-1.5 ${className} text-xs`}>
+              <img src={icon} alt={tech} class="inline-block w-4 h-4 mr-2" />
+              {name}
+            </span>
+          </li>
+        )
+      })}
     </ul>
-  </article>
-</li>
+  </div>
+</article>
