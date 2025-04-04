@@ -1,45 +1,32 @@
-# Portafolio 🧑🏻‍💻
+# Portafolio - Frontend Developer
 
-![basics](https://github.com/enriqueSFranco/kikesf-website/blob/main/src/assets/images/preview.png)
+![Vista previa del proyecto](./src/assets/portafolio-preview.png)
 
+¡Bienvenido a mi portafolio de Frontend Developer! Aquí podrás explorar algunos de los proyectos que he creado utilizando tecnologías web modernas. Mi objetivo es siempre crear interfaces de usuario intuitivas, responsivas y accesibles. A continuación, encontrarás una descripción general de los proyectos que forman parte de mi portafolio, así como las tecnologías que utilizo.
 
-## 🚀 Project Structure
+🚀 Sobre mí
+Soy Frontend Developer con conocimientos en JavaScript, TypeScript y React, siempre buscando mejorar la experiencia del usuario. Además, me interesa seguir aprendiendo y explorar nuevas tecnologías, lo que me permite adaptarme a distintos proyectos y aportar soluciones prácticas.
 
-Inside of your Astro project, you'll see the following folders and files:
+🛠️ Tecnologías que utilizo
+HTML5: Estructuración de contenido y accesibilidad web.
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Tailwind: Diseño visual, Flexbox y Grid.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Astro: Framework para crear sitios estáticos rápidos y modernos.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+💻 Proyectos Destacados
+1. BOLSA DE TRABAJO ESCOM (PROYECTO DE TESIS)
+Descripción: Breve descripción de lo que hace el proyecto. Por ejemplo, una plataforma de comercio electrónico con un diseño atractivo y una interfaz de usuario dinámica.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Tecnologías utilizadas: React, Context, Redux, Styled Components, Axios, Python, DJango REST FRAMEWORK.
 
-## 🧞 Commands
+2. DETECCIÓN DE TOXICIDAD (PROYECTO PERSONAL)
+Descripción: Aplicación web para detectar en tiempo real los mensajes con lenguaje tóxico en las comunidades de canales de Twitch.
 
-All commands are run from the root of the project, from a terminal:
+Tecnologías utilizadas: JavaScript React, TailwindCss, tmi.js, nodejs, y API REST.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3. INTELLICE CV (PROYECTO PERSONAL)
+Descripción: Breve descripción del proyecto. Por ejemplo, una página de portafolio personal.
 
-## 👀 Want to learn more?
+Tecnologías utilizadas: Typescript, React, TailwindCss, Zustand, Dnd kit, TipTap Editor.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
