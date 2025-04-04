@@ -1,15 +1,16 @@
-import NextjsIcon from "public/icons/nextjs.svg"
-import jsIcon from "public/icons/javascript.svg"
-import reactIcon from "public/icons/react.svg"
-import tsIcon from "public/icons/typescript.svg"
-import tailwindIcon from "public/icons/tailwindcss.svg"
-import pythonIcon from "public/icons/python.svg"
-import djangoIcon from "public/icons/django.svg"
-import styledComponentsIcon from "public/icons/styledcomponents.svg"
-import nodeIcon from "public/icons/node.svg"
-import postgresqlIcon from "public/icons/postgresql.svg"
-import twitchIcon from "public/icons/twitch.svg"
-import zustandIcon from "public/icons/zustand.svg"
+import NextjsIcon from "/icons/nextjs.svg"
+import jsIcon from "/icons/javascript.svg"
+import reactIcon from "/icons/react.svg"
+import tsIcon from "/icons/typescript.svg"
+import tailwindIcon from "/icons/tailwindcss.svg"
+import pythonIcon from "/icons/python.svg"
+import djangoIcon from "/icons/django.svg"
+import styledComponentsIcon from "/icons/styledcomponents.svg"
+import nodeIcon from "/icons/node.svg"
+import postgresqlIcon from "/icons/postgresql.svg"
+import twitchIcon from "/icons/twitch.svg"
+import gitIcon from "/icons/git.svg"
+import zustandIcon from "/icons/zustand.svg"
 
 export const TAGS = {
   JAVASCRIPT: {
@@ -29,7 +30,7 @@ export const TAGS = {
   },
   NEXTJS: {
     name: "Nextjs",
-    class: "bg-black text-white",
+    class: "bg-black outline outline-[1px] outline-white/20 text-white",
     icon: NextjsIcon,
   },
   TAILWINDCSS: {
@@ -71,5 +72,10 @@ export const TAGS = {
     name: "tmi.js",
     class: "bg-violet-500/40 text-white",
     icon: twitchIcon,
+  },
+  GIT: {
+    name: "Git",
+    class: "bg-orange-500/40 text-white",
+    icon: gitIcon,
   }
 }
