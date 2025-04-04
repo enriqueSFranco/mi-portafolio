@@ -14,43 +14,36 @@ const SOCIAL_NETWORK: Record<string, any> = {
 };
 ---
 
-<section class='relative w-full font-light text-sm leading-normal flex flex-col items-center justify-center gap-4'>
-  <div class="flex flex-col items-center gap-4">
-    <figure class='w-32 h-32 overflow-hidden rounded-full'>
+<section class='relative w-full font-light text-sm leading-normal flex flex-col items-start justify-center gap-4'>
+  <div class="flex items-center gap-4">
+    <figure class='w-20 h-20 overflow-hidden rounded-full'>
       <img
         class='w-full h-full object-cover object-top'
         src={meSrc}
-        alt={name}
+        alt={`foto de ${name}`}
+        loading="lazy"
       />
     </figure>
-    
-    <div class="leading-snug flex flex-col text-center text-5xl font-semibold">
-      <h2 class='text-2xl font-normal flex justify-center items-center gap-2 text-center leading-relaxed'>
-        Hey, soy {name} 👋  <Badge>Disponible para trabajar</Badge>
-      </h2>
-      <h2>
-        fronted develoer web
-      </h2>
-      <p>
-        viviendo en México
-      </p>
-      <p class="text-sm text-gray-400 font-normal text-center max-w-xl leading-relaxed">
-  
-        Soy Frontend Developer con conocimientos en <em>JavaScript</em> y <em>React</em>, siempre buscando mejorar la
-        experiencia del usuario. 
-      </p>
-    </div>
+    <Badge>Disponible para trabajar</Badge>
   </div>
+  <h2 class='text-2xl font-normal flex justify-center items-center gap-2 text-center leading-relaxed'>
+    Hey, soy {name} 👋  
+  </h2>
+  <p class="text-md text-gray-400 font-normal max-w-xl leading-relaxed">
+
+    Soy <span class="bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 inline-block text-transparent bg-clip-text">Frontend Developer</span> con conocimientos en <em>JavaScript</em> y <em>React</em>, siempre buscando mejorar la
+    experiencia del usuario. 
+  </p>
     <ul class='flex items-center justify-start gap-4 self-start'>
       <li>
-          <a
-            href={`mailto:${email}`}
-            target='_blank'
-            aria-label={`Enviar correo electrónico a ${email}`}
-            title={`Enviar correo electrónico a ${email}`}
-            tabindex='0'
-            class='bg-white/20 flex items-center gap-2 text-xs px-3 py-1.5 rounded-full'><IcMaildotru />{email}</a
-          >
+        <a
+          href={`mailto:${email}`}
+          target='_blank'
+          aria-label={`Enviar correo electrónico a ${email}`}
+          title={`Enviar correo electrónico a ${email}`}
+          tabindex='0'
+          class='bg-white/20 flex items-center gap-2 text-xs px-3 py-1.5 rounded-full'><IcMaildotru />{email}</a
+        >
       </li>
       {
         profiles.map(({ network, url, username }, idx) => {

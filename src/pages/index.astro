@@ -3,8 +3,8 @@ import Layout from "@/layouts/Layout.astro";
 import Projects from "./Projects.astro";
 import Education from "./Education.astro";
 import Basic from "./Basic.astro";
+import Footer from "@/components/Footer.astro";
 import HardSkills from "./HardSkills.astro";
-import SoftSkills from "./SoftSkills.astro";
 import cv from "@/cv.json";
 
 const { name, job } = cv.basic;
@@ -19,6 +19,6 @@ const { name, job } = cv.basic;
     <Education />
     <Projects />
     <HardSkills />
-    <SoftSkills />
   </main>
+  <Footer />
 </Layout>
