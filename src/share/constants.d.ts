@@ -11,6 +11,9 @@ import postgresqlIcon from "/icons/postgresql.svg"
 import twitchIcon from "/icons/twitch.svg"
 import gitIcon from "/icons/git.svg"
 import zustandIcon from "/icons/zustand.svg"
+import tiptapIcon from "/icons/tiptap.svg"
+//import dndkitIcon from "/icons/dnd-kit.svg"
+
 
 export const TAGS = {
   JAVASCRIPT: {
@@ -68,14 +71,24 @@ export const TAGS = {
     class: "bg-stone-500/40 text-white",
     icon: zustandIcon,
   },
+  GIT: {
+    name: "Git",
+    class: "bg-orange-500/40 text-white",
+    icon: gitIcon,
+  },
   TWITCH: {
     name: "tmi.js",
     class: "bg-violet-500/40 text-white",
     icon: twitchIcon,
   },
-  GIT: {
-    name: "Git",
-    class: "bg-orange-500/40 text-white",
-    icon: gitIcon,
-  }
+  TIPTAP: {
+    name: "tiptap",
+    class: "bg-black outline outline-[1px] outline-white/20 text-white",
+    icon: tiptapIcon,
+  },
+  //DND_KIT: {
+  //  name: "dnd-kit",
+  //  class: "bg-black outline outline-[1px] outline-white/20 text-white",
+  //  icon: dndKitIcon,
+  //},
 }
