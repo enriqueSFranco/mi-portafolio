@@ -43,7 +43,7 @@ Soy **Frontend Developer** con experiencia en **JavaScript**, **TypeScript** y *
 
 ---
 
-### 3. **[IntelliCe CV (Proyecto Personal)](enlace-a-tu-proyecto)**
+### 3. **[Intellice CV (Proyecto Personal)](enlace-a-tu-proyecto)**
 **Descripción**: Página personal para la gestión y creación de currículums de manera interactiva. Los usuarios pueden diseñar su CV de manera intuitiva y exportarlo en formato PDF.
 
 **Tecnologías utilizadas**: TypeScript, React, Tailwind CSS, Zustand, DnD Kit, TipTap Editor.
