@@ -20,11 +20,6 @@ Soy **Frontend Developer** con experiencia en **JavaScript**, **TypeScript** y *
 - **Tailwind CSS**: Diseño visual, Flexbox y Grid.
 - **Astro**: Framework para crear sitios estáticos rápidos y modernos.
 - **JavaScript/TypeScript**: Lenguajes de programación para la lógica y la interactividad del sitio.
-- **React**: Librería para crear interfaces de usuario dinámicas.
-- **Redux/Context**: Gestión del estado de la aplicación.
-- **Styled Components**: Para el estilizado en React de manera modular y escalable.
-- **Axios**: Para la comunicación con APIs REST.
-
 ---
 
 ## 💻 Proyectos Destacados
